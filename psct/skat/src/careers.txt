@@ -1,0 +1,30 @@
+actor/actress
+astronaut
+athlete
+author
+banker
+civil servant
+detective
+doctor
+engineer
+entrepreneur
+estate agent
+farmer
+firefighter
+hairdresser
+judge
+lawyer
+librarian
+game tester
+mechanic
+nurse
+pilot
+politician
+shopkeeper
+soldier
+surveyor
+teacher
+technician
+tennis player
+vet
+zoologist
