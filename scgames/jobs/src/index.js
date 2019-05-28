@@ -223,8 +223,6 @@ $("#finish").click(function() {
   		dislikedcards: disliked.toString(),
   		uncertain: uncertain.toString()
 	  };
-
-    console.log(data);
 	  
     //AJAX request to insert, on success links to next
 	  $.ajax({
@@ -232,8 +230,7 @@ $("#finish").click(function() {
 		type: "post",
 		url: "https://nustem.uk/r/scgames/jobs/request.php",
 		success: function(data){
-      console.log(data);
-		  // window.location.replace("https://nustem.uk/r/scgames/mesci");
+		  window.location.replace("https://nustem.uk/r/scgames/mesci");
 		}
 	  });
   } else {
