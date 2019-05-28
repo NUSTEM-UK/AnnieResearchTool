@@ -1,9 +1,10 @@
 CREATE TABLE careers(
 	id CHAR(12) PRIMARY KEY,
-	unknown SET('actor/actress','architect','artist','author','bank assistant','builder','care worker','chef/cook','computer programmer','delivery driver','doctor','engineer','factory worker','fashion designer','hairdresser','lawyer','manager','mechanic','nurse','office worker','pilot','police officer','scientist','shop assistant ','social worker','sports coach','teacher','technician ','vet ','waiter/waitress'),
-	liked SET('actor/actress','architect','artist','author','bank assistant','builder','care worker','chef/cook','computer programmer','delivery driver','doctor','engineer','factory worker','fashion designer','hairdresser','lawyer','manager','mechanic','nurse','office worker','pilot','police officer','scientist','shop assistant ','social worker','sports coach','teacher','technician ','vet ','waiter/waitress'),
-	disliked SET('actor/actress','architect','artist','author','bank assistant','builder','care worker','chef/cook','computer programmer','delivery driver','doctor','engineer','factory worker','fashion designer','hairdresser','lawyer','manager','mechanic','nurse','office worker','pilot','police officer','scientist','shop assistant ','social worker','sports coach','teacher','technician ','vet ','waiter/waitress'),
-	unsure SET('actor/actress','architect','artist','author','bank assistant','builder','care worker','chef/cook','computer programmer','delivery driver','doctor','engineer','factory worker','fashion designer','hairdresser','lawyer','manager','mechanic','nurse','office worker','pilot','police officer','scientist','shop assistant ','social worker','sports coach','teacher','technician ','vet ','waiter/waitress')
+	unknown SET('ac','ar','at','au','ba','bu','cw','ch','cp','dd','do','en','fw','fd','hd','la','ma','me','nu','ow','pi','po','sc','sa','sw','sp','te','tc','ve','wa'),
+	liked SET('ac','ar','at','au','ba','bu','cw','ch','cp','dd','do','en','fw','fd','hd','la','ma','me','nu','ow','pi','po','sc','sa','sw','sp','te','tc','ve','wa'),
+	disliked SET('ac','ar','at','au','ba','bu','cw','ch','cp','dd','do','en','fw','fd','hd','la','ma','me','nu','ow','pi','po','sc','sa','sw','sp','te','tc','ve','wa'),
+	unsure SET('ac','ar','at','au','ba','bu','cw','ch','cp','dd','do','en','fw','fd','hd','la','ma','me','nu','ow','pi','po','sc','sa','sw','sp','te','tc','ve','wa'),
+	timestamp DATETIME
 );
 
 CREATE TABLE attrib(
@@ -25,12 +26,13 @@ CREATE TABLE attrib(
 	scifun TINYINT UNSIGNED NOT NULL,
 	scifriendly TINYINT UNSIGNED NOT NULL,
 	scicurious TINYINT UNSIGNED NOT NULL,
-	scihardworking TINYINT UNSIGNED NOT NULL
+	scihardworking TINYINT UNSIGNED NOT NULL,
+	timestamp DATETIME
 );
 
 CREATE TABLE scientistasp(id CHAR(12) PRIMARY KEY, scientist VARCHAR(40) NOT NULL);
 
-CREATE TABLE careers_list(id VARCHAR(20) PRIMARY KEY);
+CREATE TABLE careers_list(id VARCHAR(2) PRIMARY KEY, careers VARCHAR(20) NOT NULL);
 
 CREATE TABLE attrib_list(id VARCHAR(20) PRIMARY KEY);
 
@@ -44,3 +46,9 @@ INSERT INTO attrib(id, meclever, mecreative, mepatient, mebrave, mehelpful, mefu
 	VALUES(:id, :meclever, :mecreative, :mepatient, :mebrave, :mehelpful, :mefun, :mefriendly, :mecurious, :mehardworking, :sciclever, :scicreative, :scipatient, :scibrave, :scihelpful, :scifun, :scifriendly, :scicurious, :scihardworking);
 
 SELECT id, unknown, CONCAT(liked, disliked, unsure) AS known, liked, disliked, unsure FROM careers_feedback;
+
+CREATE TRIGGER add_datetime_careers BEFORE INSERT ON careers
+	FOR EACH ROW SET NEW.timestamp = now();
+
+CREATE TRIGGER add_datetime_attrib BEFORE INSERT ON attrib
+	FOR EACH ROW SET NEW.timestamp = now();
