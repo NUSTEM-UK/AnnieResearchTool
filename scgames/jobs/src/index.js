@@ -12,19 +12,22 @@ $.ajax({
   type: "post",
   url: "https://nustem.uk/r/scgames/jobs/getcareers.php",
   success: function(data){
-	var cardtext = data.split(",").reverse();
-	numCards = cardtext.length - 1;
-	
-	cardtext.forEach(function(card) {
-	  if(card){
-		let div = document.createElement("div");
-		div.classList.add("drag-drop1");
-		div.id = card;
-		div.innerHTML = card;
+  console.log(data);
+  var cardtext = data.split("%").reverse();
+  numCards = cardtext.length - 1;
+  
+  cardtext.forEach(function(card) {
+    card = card.split(",");
+    console.log(card);
+    if(card[0]){
+    let div = document.createElement("div");
+    div.classList.add("drag-drop1");
+    div.id = card[0];
+    div.innerHTML = card[1];
 
-		document.querySelector("#start-dropzone").appendChild(div);
-	  }
-	});
+    document.querySelector("#start-dropzone").appendChild(div);
+    }
+  });
   }
 });
 
@@ -146,14 +149,15 @@ $("#next").click(function() {
 	  knownEl.forEach(function(element) {
 		known.push(element.id);
 	  });
-	  known.forEach(function(card) {
+	  knownEl.forEach(function(card) {
 		let div = document.createElement("div");
 		div.classList.add("drag-drop2");
-		div.id = card;
-		div.innerHTML = card;
+		div.id = card.id;
+		div.innerHTML = card.innerHTML;
 
 		document.querySelector("#knownstart-dropzone").appendChild(div);
 	  });
+  
 	  document.querySelector("#dropboxes1").style.display = "none";
 	  document.querySelector("#dropboxes2").style.display = "flex";
 	  document.querySelector("#next").style.display = "none";

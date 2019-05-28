@@ -1,6 +1,7 @@
 <?php
 	include('connect.php');
 
+    $ids = array();
 	$careers = array();
 	$data = array();
 
@@ -9,8 +10,14 @@
 	$careers_request = 'SELECT * FROM careers_list;';
     foreach ($conn -> query($careers_request) as $row) {
     	if (trim($row['id']) != '') {
-			array_push($careers,$row['id']);
+			array_push($ids,$row['id']);
 		}
+    }
+
+    foreach ($conn -> query($careers_request) as $row) {
+        if (trim($row['careers']) != '') {
+            array_push($careers,$row['careers']);
+        }
     }
 
     $sql = 'SELECT id, unknown, liked, disliked, unsure FROM careers;';
@@ -19,7 +26,7 @@
 
         $data[$row['id']]['id'] = $row['id'];
         
-    	foreach ($careers as $career) {
+    	foreach ($ids as $career) {
            $data[$row['id']][$career] = 0;
     	}
 

@@ -16,13 +16,20 @@ if(isset($_REQUEST))
 	$conn = connect();
 
 	$stmt = $conn -> prepare("INSERT INTO careers(id, unknown, liked, disliked, unsure) VALUES(:id, :unknown, :liked, :disliked, :unsure);");
-	$stmt -> execute([':id' => $id, ':unknown' => $unknown, ':liked' => $liked, ':disliked' => $disliked, ':unsure' => $uncertain]);
+	$stmt -> execute([':id' => $id, ':liked' => $liked,  ':unknown' => $unknown, ':disliked' => $disliked, ':unsure' => $uncertain]);
 
-	// echo $id;
-	// echo $unknown;
-	// echo $liked;
-	// echo $disliked;
-	// echo $uncertain;
+	echo $id;
+	echo "\n";
+	echo $unknown;
+	echo "\n";
+	echo $liked;
+	echo "\n";
+	echo $disliked;
+	echo "\n";
+	echo $uncertain;
+	echo "\n";
 	echo $stmt->errorCode();
+	echo "\n";
+	print_r ($stmt->errorInfo());
 }
 ?>
