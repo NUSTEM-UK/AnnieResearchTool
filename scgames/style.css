@@ -67,7 +67,7 @@ body {
 	border-radius: 5px 5px 0px 0px;
 }
 
-#content form .submit{
+#content form input.submit:hover{
 	border: 2px solid #4B5459;
 }
 

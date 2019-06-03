@@ -268,7 +268,7 @@ interact(".draggable2").draggable({
 	//ondend: dropOffset
 });
 
-//
+// Update position as dragged
 function dragMoveListener(event) {
 	var target = event.target,
 	// keep the dragged position in the data-x/data-y attributes
@@ -286,6 +286,7 @@ function dragMoveListener(event) {
 	target.setAttribute("data-ay", $('#' + target.id).offset().top);
 }
 
+// Sets offset so each card sits in their container's center
 function dropOffset(event) {
 	draggedEl = event.target;
 	parentEl = $('#' + draggedEl.id).parent()[0];
@@ -316,7 +317,7 @@ function allowSpeech () {
 //On dragging over speacker box reads card
 function cardSpeak(event) {
 	if (canPlay){
-	var eventCardText = event.relatedTarget.id;
+	var eventCardText = event.relatedTarget.innerHTML;
 	artyom.say(eventCardText);
 	}
 }

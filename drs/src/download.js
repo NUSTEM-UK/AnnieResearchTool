@@ -1,3 +1,4 @@
+// Downloads MLM/S data
 $(".M").click(function() {
   console.log("mlm");
   $.ajax({
@@ -15,6 +16,7 @@ $(".M").click(function() {
   });
 });
 
+// Downloads SKAT data
 $(".S").click(function() {
   console.log("skat");
   $.ajax({

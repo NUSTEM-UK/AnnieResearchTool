@@ -1,4 +1,5 @@
 <?php
+    // Connect to BD
 	include('connect.php');
 
     $ids = array();
@@ -19,8 +20,8 @@
             array_push($careers,$row['careers']);
         }
     }
-
-    $sql = 'SELECT id, unknown, liked, disliked, unsure FROM careers;';
+    // Selects all data in DB
+    $sql = "SELECT * FROM careers ORDER BY 'timestamp';";
     foreach($conn -> query($sql) as $row) {
       	$data[$row['id']] = array();
 
@@ -45,9 +46,12 @@
     	foreach (explode(",", $row['unsure']) as $career) {
            $data[$row['id']][$career] = 3;
     	}
+
+        $data[$row['id']]['timestamp'] = $row['timestamp'];
     }
     
-    echo "id,".implode(",", $careers)."\r\n";
+    // Return data in CVS format to download
+    echo "id,".implode(",", $careers).",timestamp\r\n";
 
     foreach ($data as $fields) {
         echo implode(",", $fields)."\r\n";
