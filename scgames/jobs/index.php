@@ -9,11 +9,15 @@
     <?php
       session_start();
 
-      $fname=$_SESSION["fname"];
-      $lname=$_SESSION["lname"];
-      $bday=$_SESSION["bday"];
-      $bmonth=$_SESSION["bmonth"];
-      $school=$_SESSION["school"];
+      $fname = ($_SESSION["fname"] ?: NULL);
+      $lname = ($_SESSION["lname"] ?: NULL);
+      $bday = $_SESSION["bday"];
+      $bmonth = $_SESSION["bmonth"];
+      $school = ($_SESSION["school"] ?: NULL);
+
+      if ($fname == NULL) {
+        header("Location: https://nustem.uk/r/scgames/");
+      }
     ?>
   </head>
 

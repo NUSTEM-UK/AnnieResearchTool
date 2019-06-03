@@ -36,6 +36,6 @@ if(isset($_REQUEST))
 
 	$stmt -> execute([':id' => $id, ':meclever' => $meNum[1], ':mecreative' => $meNum[2], ':mepatient' => $meNum[8], ':mebrave' => $meNum[0], ':mehelpful' => $meNum[7], ':mefun' => $meNum[5], ':mefriendly' => $meNum[4], ':mecurious' => $meNum[3], ':mehardworking' => $meNum[6], ':sciclever' => $sciNum[1], ':scicreative' => $sciNum[2], ':scipatient' => $sciNum[8], ':scibrave' => $sciNum[0], ':scihelpful' => $sciNum[7], ':scifun' => $sciNum[5], ':scifriendly' => $sciNum[4], ':scicurious' => $sciNum[3], ':scihardworking' => $sciNum[6]]);
 
-	echo $id;
+	print_r ($stmt->errorInfo());
 }
 ?>

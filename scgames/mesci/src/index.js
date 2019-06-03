@@ -123,7 +123,12 @@ $("#finish").click(function() {
 			type: "post",
 			url: "https://nustem.uk/r/scgames/mesci/request.php",
 			success: function(data){
-				window.location.replace("https://nustem.uk/r/scgames/EndScreen?id=" + data);
+				if (data){
+			        window.alert(data);
+			    }
+			    else {
+					window.location.replace("https://nustem.uk/r/scgames/EndScreen");
+				}
 			}
 		});
 	} else {

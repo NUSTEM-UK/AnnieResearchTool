@@ -13,5 +13,5 @@
 	$_SESSION["bmonth"]=(int)$bmonth;
 	$_SESSION["school"]=(Int)$school;
 
-	header("Location: https://nustem.uk/r/scgames/jobs/")
+	header("Location: https://nustem.uk/r/scgames/jobs/");
 ?>
