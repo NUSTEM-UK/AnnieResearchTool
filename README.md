@@ -19,4 +19,6 @@ Encoding procedure:
   - Last name initial as number from 00 to 25
   - Birth day as number from 01 to 31 (becomes "00" if no data is entered)
   - Birth month as number from 01 to 12 (becomes "00" if no data is entered)
-  - School identifier based on the current system in use
+  - School identifier based on the current system in use composed of 4 digits
+
+Creates a 12 digit identifier.
