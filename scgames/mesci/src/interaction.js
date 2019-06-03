@@ -316,7 +316,7 @@ function allowSpeech () {
 //On dragging over speacker box reads card
 function cardSpeak(event) {
 	if (canPlay){
-	var eventCardText = event.relatedTarget.id;
+	var eventCardText = event.relatedTarget.innerHTML;
 	artyom.say(eventCardText);
 	}
 }

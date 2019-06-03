@@ -20,6 +20,5 @@ if(isset($_REQUEST))
 
 	$errorCode = $stmt->errorInfo();
 	echo $errorCode[0];
-	// print_r ($stmt->errorInfo());
 }
 ?>

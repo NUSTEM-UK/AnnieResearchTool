@@ -101,7 +101,7 @@ function pad(n, width, z) {
 //Play card name
 function cardSpeak(event) {
 	if (canPlay){
-	var eventCardText = event.relatedTarget.id;
+	var eventCardText = event.relatedTarget.innerHTML;
 	artyom.say(eventCardText);
 	}
 }
