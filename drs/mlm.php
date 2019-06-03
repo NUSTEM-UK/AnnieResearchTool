@@ -1,4 +1,5 @@
 <?php
+	// Connect to BD
 	include('connect.php');
 
 	$headers = array('id','meclever','mecreative','mepatient','mebrave','mehelpful','mefun','mefriendly','mecurious','mehardworking','sciclever','scicreative','scipatient','scibrave','scihelpful','scifun','scifriendly','scicurious','scihardworking','timestamp');
@@ -10,6 +11,7 @@
 		$feedback[$id] = array(0,0,0,0,0,0,0,0,0,0);
     }
 
+    // Selects all data in DB
     $sql = "SELECT * FROM attrib ORDER BY 'timestamp';";
     foreach($conn -> query($sql) as $row) {
     	array_push($data,array(
@@ -35,6 +37,7 @@
 	    	$row['timestamp']));
     }
 
+    // Return data in CVS format to download
 	echo implode(",", $headers)."\r\n";
 
 	foreach ($data as $values) {

@@ -1,3 +1,6 @@
+
+
+<!DOCTYPE html>
 <html>
   <head>
     <title>Most Like Me/Most Like a Scientist</title>
@@ -8,12 +11,14 @@
 	<?php
       session_start();
 
+      // Grab session data to use to create personal ID
       $fname = ($_SESSION["fname"] ?: NULL);
       $lname = ($_SESSION["lname"] ?: NULL);
       $bday = $_SESSION["bday"];
       $bmonth = $_SESSION["bmonth"];
       $school = ($_SESSION["school"] ?: NULL);
 
+      // Sends back to begining if there is no session data
       if ($fname == NULL) {
         header("Location: https://nustem.uk/r/scgames/");
       }
@@ -22,6 +27,7 @@
 
   <body>
 
+  	<!-- Location for session data for JS scripts to access -->
   	<form id="hidden-data">
       <input type="text" name="fname" class="fname" value=<?php echo "'".$fname."'"; ?>>
       <input type="text" name="lname" class="lname" value=<?php echo "'".$lname."'"; ?>>
@@ -30,6 +36,7 @@
       <input type="text" name="school" class="school" value=<?php echo "'".$school."'"; ?>>
     </form>
     
+    <!-- App to compare expectations about yourself -->
     <div id="app" class="dropbox outside me">
     	<div id="playsound-dropzone" class="dropbox outside">
 			<button type="submit" onclick="allowSpeech()"><img id="sound" src="img/NoSpeaker.png"/></button>
@@ -63,6 +70,7 @@
 		<button type="submit" id="next">Next...</button>
 	</div>
 
+	<!-- App to compare expectations about scientists -->
 	<div id="app2" class="dropbox2 outside sci">
 		<div id="playsound-dropzone" class="dropbox2 outside">
 			<button type="submit" onclick="allowSpeech()"><img id="sound" src="img/NoSpeaker.png"/></button>
@@ -96,6 +104,7 @@
 		<button type="submit" id="finish">Finish...</button>
 	</div>
 
+	<!-- Instruction overlays -->
 	<div id="overlay-wrapper">
 	    <div class="overlay page1">
 	    	<h1>Instructions : Game 2</h1>
@@ -116,6 +125,7 @@
 	    </div>
     </div>
 	
+	<!-- JS Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.4/dist/interact.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="src/artyom.window.min.js"></script>

@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
     <link rel="icon" type="image/png" href="img/NUSTEMSQR.jpg"/>
     <?php
+      // Resets session data so next itteration does not get contaminated
       session_start();
       $_SESSION = array();
       session_destroy();

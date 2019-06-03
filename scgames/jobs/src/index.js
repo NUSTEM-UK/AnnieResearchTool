@@ -92,13 +92,14 @@ interact(".drag-drop2").draggable({
   onmove: dragMoveListener
 });
 
+// Pads a number with 0s to reach an expected amount
 function pad(n, width, z) {
   z = z || '0';
   n = n + '';
   return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 }
 
-//Play card name
+// Play card name
 function cardSpeak(event) {
 	if (canPlay){
 	var eventCardText = event.relatedTarget.innerHTML;
@@ -106,6 +107,7 @@ function cardSpeak(event) {
 	}
 }
 
+// Update position as dragged
 function dragMoveListener(event) {
   var target = event.target,
     // keep the dragged position in the data-x/data-y attributes
@@ -121,6 +123,7 @@ function dragMoveListener(event) {
   target.setAttribute("data-y", y);
 }
 
+// Switches TTS system on and off to help bypass iPad bug with google speech synthesis
 function allowSpeech () {
 	if (canPlay){
 		$('#sound').attr("src","img/NoSpeaker.png");
@@ -133,6 +136,7 @@ function allowSpeech () {
 	}
 }
 
+// Closes all overlays
 $(".close-overlay").click(function() {
   document.querySelector("#overlay-wrapper").style.display = "none";
 });
@@ -230,8 +234,9 @@ $("#finish").click(function() {
 		type: "post",
 		url: "https://nustem.uk/r/scgames/jobs/request.php",
 		success: function(data){
+      // Displays alert if there is and error
       if (data != "00000"){
-        window.alert(data);
+        window.alert("Error Code : " + data);
       } else {
         window.location.replace("https://nustem.uk/r/scgames/mesci");
       }

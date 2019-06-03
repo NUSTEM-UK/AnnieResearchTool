@@ -123,6 +123,7 @@ $("#finish").click(function() {
 			type: "post",
 			url: "https://nustem.uk/r/scgames/mesci/request.php",
 			success: function(data){
+				// Displays alert if there is and error
 				if (data != "00000"){
 			        window.alert(data);
 			    }
