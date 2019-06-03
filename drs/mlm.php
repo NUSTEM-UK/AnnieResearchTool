@@ -1,7 +1,7 @@
 <?php
 	include('connect.php');
 
-	$headers = array('id','meclever','mecreative','mepatient','mebrave','mehelpful','mefun','mefriendly','mecurious','mehardworking','sciclever','scicreative','scipatient','scibrave','scihelpful','scifun','scifriendly','scicurious','scihardworking');
+	$headers = array('id','meclever','mecreative','mepatient','mebrave','mehelpful','mefun','mefriendly','mecurious','mehardworking','sciclever','scicreative','scipatient','scibrave','scihelpful','scifun','scifriendly','scicurious','scihardworking','timestamp');
 	$data = array();
 
 	$conn = connect();
@@ -10,7 +10,7 @@
 		$feedback[$id] = array(0,0,0,0,0,0,0,0,0,0);
     }
 
-    $sql = 'SELECT id, meclever, mecreative, mepatient, mebrave, mehelpful, mefun, mefriendly, mecurious, mehardworking, sciclever, scicreative, scipatient, scibrave, scihelpful, scifun, scifriendly, scicurious, scihardworking FROM attrib;';
+    $sql = "SELECT * FROM attrib ORDER BY 'timestamp';";
     foreach($conn -> query($sql) as $row) {
     	array_push($data,array(
     		$row['id'],
@@ -31,7 +31,8 @@
 	    	$row['scifun'],
 	    	$row['scifriendly'],
 	    	$row['scicurious'],
-	    	$row['scihardworking']));
+	    	$row['scihardworking'],
+	    	$row['timestamp']));
     }
 
 	echo implode(",", $headers)."\r\n";
