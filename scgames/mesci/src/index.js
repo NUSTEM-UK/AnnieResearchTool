@@ -54,7 +54,7 @@ $("#next").click(function() {
 		document.querySelector(".page2").style.display = "block";
 		document.querySelector("#overlay-wrapper").style.display = "block";
 	} else {
-		window.alert("Make sure to up everything in a box");
+		window.alert("Make sure to put everything in a box");
 	}
 });
 
@@ -123,7 +123,7 @@ $("#finish").click(function() {
 			type: "post",
 			url: "https://nustem.uk/r/scgames/mesci/request.php",
 			success: function(data){
-				if (data){
+				if (data != "00000"){
 			        window.alert(data);
 			    }
 			    else {

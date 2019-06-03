@@ -230,10 +230,9 @@ $("#finish").click(function() {
 		type: "post",
 		url: "https://nustem.uk/r/scgames/jobs/request.php",
 		success: function(data){
-      if (data){
+      if (data != "00000"){
         window.alert(data);
-      }
-      else {
+      } else {
         window.location.replace("https://nustem.uk/r/scgames/mesci");
       }
 		}

@@ -18,6 +18,8 @@ if(isset($_REQUEST))
 	$stmt = $conn -> prepare("INSERT INTO careers(id, unknown, liked, disliked, unsure) VALUES(:id, :unknown, :liked, :disliked, :unsure);");
 	$stmt -> execute([':id' => $id, ':liked' => $liked,  ':unknown' => $unknown, ':disliked' => $disliked, ':unsure' => $uncertain]);
 
-	print_r ($stmt->errorInfo());
+	$errorCode = $stmt->errorInfo();
+	echo $errorCode[0];
+	// print_r ($stmt->errorInfo());
 }
 ?>
