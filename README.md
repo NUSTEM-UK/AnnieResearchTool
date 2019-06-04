@@ -8,17 +8,27 @@ Primary research tool to improve data collection for the NUSTEM team. The compon
 
 ## Requirements
 
-TODO: Ivan
+- Runs on a MySQL and PHP capable server
+- Includes JQuery and the Google Speech Synthesis API
+- Utilizes Interact.js to implement dragging feature
 
 ## Bringing the system up
 
-TODO: Ivan. Tell me about `careersinsert.php` and any other steps needed to start from scratch.
+- Use `InteractiveCardsWebAppSQL.txt` to set up the necessary SQL infrastructure
+- Run the `careersinsert.php` script to initialize the careers list for dynamic updates later
+- Ensure each of the subfolders has a version of `connect.php`
 
 ## System overview
 
-TODO: Ivan. Describe the directory tree, what each component does, and what the entry points are.
+The project is split into 3 different directories:
 
-## Customisation
+- `scgames` contains the main web app used for research purposes in schools, accessible at [nustem.uk/r/scgames](https://nustem.uk/r/scgames/)
+- `psct` is an instance of the main app for the purposes of displaying its use to potential interested parties accessible at [nustem.uk/r/psct](https://nustem.uk/r/psct/) - **currently WIP**
+- `drs` is the download app, it will display the links to download `.csv` files from the database
+- `careersinsert.php` inserts a list of careers into the *careers_list* table
+- `InteractiveCardsWebAppSQL.txt` contains all SQL statements necessary to set up database
+
+## Customization (WIP)
 
 TODO: Ivan. How would one:
 
@@ -26,7 +36,7 @@ TODO: Ivan. How would one:
 - Change careers lists
 - Separate the two tools so we could run one or the other rather than chaining both (give pointers here)
 
-### ID Creation
+## ID Creation
 
 Components to make up ID:
 
