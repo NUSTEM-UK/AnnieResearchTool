@@ -30,11 +30,9 @@ The project is split into 3 different directories:
 
 ## Customization (WIP)
 
-TODO: Ivan. How would one:
-
-- Amend the schools list in the drop-down (affects UID creation)
-- Change careers lists
-- Separate the two tools so we could run one or the other rather than chaining both (give pointers here)
+- The schools list can currently only be amended in the `index.html` file. They can be edited by changing the `options` in the `select` section of the form. *Future iterations are planned to have a more modular design.*
+- The careers list is pulled from the table to instantiate the cards as needed, any changes to the table on the database will update the list of careers. Currently, the file called `careerslist.txt` is being used to create this table.
+- There is currently no built-in way to separate the tools, future versions will have this feature. If the tools are to be used separately, they would need to be slightly redesigned to fit into a larger system. The two tools are in two independent folders, `mesci` and `skat` making this step easier - **currently WIP**
 
 ## ID Creation
 
