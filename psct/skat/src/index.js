@@ -175,6 +175,8 @@ $("#finish").click(function() {
   let dislikedEl = document.querySelectorAll("#dropboxes2 .disliked-dropzone");
   let uncertainEl = document.querySelectorAll("#dropboxes2 .uncertain-dropzone");
 
+
+  // TODO: Change encoding here (also in /mlm/src/index.js)
   let fnameId = $("#hidden-data .fname").val();
   let snameId = $("#hidden-data .lname").val();
   let bdayId = $("#hidden-data .bday").val();

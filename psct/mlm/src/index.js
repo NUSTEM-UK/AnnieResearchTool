@@ -67,6 +67,7 @@ $("#finish").click(function() {
 	let bmonthId = $("#hidden-data .bmonth").val();
 	let schoolId = $("#hidden-data .school").val();
 
+	// TODO: Change encoding here (also in /skat/src/index.js)
 	fnameId = pad((fnameId.substring(0, 1).toLowerCase().charCodeAt(0)-97), 2);
 	snameId = pad((snameId.substring(0, 1).toLowerCase().charCodeAt(0)-97), 2);
 	bdayId = pad(bdayId, 2);

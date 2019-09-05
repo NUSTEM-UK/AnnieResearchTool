@@ -47,6 +47,12 @@ HTML / JS:
 ✔ Amend attributes in `insertattributes.php` @done(19-09-05 17:02)
 ✔ Amend atrributes in `request.php` (in `scgames/mesci`, `psct/mlm`. @done(19-09-05 17:05)
 
+Change ID coding:
+☐ In `("#finish").click` in:
+    ☐ /mlm/src/index.js
+    ☐ /skat/src/index.js
+    ...because obviously it isn't refactored.
+
 Notes:
 Never *ever* call any variable or method 'getattrib'. 'getAttribute' is too common a thing to do in JS, and it makes it impossible to search for the method. Ugh ugh ugh.
 
