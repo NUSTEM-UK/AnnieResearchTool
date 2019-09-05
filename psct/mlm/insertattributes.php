@@ -1,5 +1,5 @@
 <?php
-	$attribs = array('Clever', 'Creative', 'Patient', 'Brave', 'Helpful', 'Fun', 'Friendly', 'Curious', 'Hardworking');
+	$attribs = array('Clever', 'Creative', 'Sensible', 'Strange', 'Kind', 'Fun', 'Friendly', 'Cool', 'Hardworking');
 	
 	include('../connect.php');
 

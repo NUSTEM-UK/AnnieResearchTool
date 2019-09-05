@@ -2,7 +2,26 @@
 	// Connect to BD
 	include('connect.php');
 
-	$headers = array('id','meclever','mecreative','mepatient','mebrave','mehelpful','mefun','mefriendly','mecurious','mehardworking','sciclever','scicreative','scipatient','scibrave','scihelpful','scifun','scifriendly','scicurious','scihardworking','timestamp');
+	$headers = array('id',
+					 'meclever',
+					 'mecreative',
+					 'mesensible',
+					 'mestrange',
+					 'mekind',
+					 'mefun',
+					 'mefriendly',
+					 'mecool',
+					 'mehardworking',
+					 'sciclever',
+					 'scicreative',
+					 'scisensible',
+					 'scistrange',
+					 'scikind',
+					 'scifun',
+					 'scifriendly',
+					 'scicool',
+					 'scihardworking',
+					 'timestamp');
 	$data = array();
 
 	$conn = connect();
@@ -18,21 +37,21 @@
     		$row['id'],
 	    	$row['meclever'],
 	    	$row['mecreative'],
-	    	$row['mepatient'],
-	    	$row['mebrave'],
-	    	$row['mehelpful'],
+	    	$row['mesensible'],
+	    	$row['mestrange'],
+	    	$row['mekind'],
 	    	$row['mefun'],
 	    	$row['mefriendly'],
-	    	$row['mecurious'],
+	    	$row['mecool'],
 	    	$row['mehardworking'],
 	    	$row['sciclever'],
 	    	$row['scicreative'],
-	    	$row['scipatient'],
-	    	$row['scibrave'],
-	    	$row['scihelpful'],
+	    	$row['scisensible'],
+	    	$row['scistrange'],
+	    	$row['scikind'],
 	    	$row['scifun'],
 	    	$row['scifriendly'],
-	    	$row['scicurious'],
+	    	$row['scicool'],
 	    	$row['scihardworking'],
 	    	$row['timestamp']));
     }

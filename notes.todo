@@ -1,0 +1,52 @@
+# Updates 2019-09-05
+
+## Changing schools:
+✔ Do in index.php @done(19-09-05 15:52)
+
+## Change careers list:
+✔ Modify array in `careersinsert.php` @done(19-09-05 15:53)
+✔ Amend `SET` inserts in `careers` table, `InteractiveCardsWebApp.sql`. @done(19-09-05 15:54)
+
+
+## Changing attributes task list:
+
+SQL:
+✔ Need to amend data in table `attrib_list` @done(19-09-05 16:20)
+  ☐ Was: Brave, Clever, Creative, Curious, Friendly, Fun, Hardworking, Helpful, Patient.
+  ☐ Now: Fun, Cool, Clever, Strange, Sensible, Creative, Hard-Working, Kind, Friendly.
+  Reorder:
+  ☐ Now: Strange, Clever, Creative, Cool, Friendly, Fun, Hardworking, Kind, Sensible.
+
+✔ So map: (search and replace) @done(19-09-05 16:53)
+    meclever        -> meclever
+    mecreative      -> mecreative
+    mepatient       -> mesensible
+    mebrave         -> mestrange
+    mehelpful       -> mekind
+    mefun           -> mefun
+    mefriendly      -> mefriendly
+    mecurious       -> mecool
+    mehardworking   -> mehardworking
+    
+    sciclever       -> sciclever
+    scicreative     -> scicreative
+    scipatient      -> scisensible
+    scibrave        -> scistrange
+    scihelpful      -> scikind
+    scifun          -> scifun
+    scifriendly     -> scifriendly
+    scicurious      -> scicool
+    scihardworking  -> scihardworking
+
+☐ Table `attrib_feedback` columns; presumably need renaming because used as keys (!).
+✔ Change columns in table `attrib` in `InteractiveCardsWebAppSQL.txt`. @done(19-09-05 16:49)
+✔ While we're at it, change `InteractiveCardsWebAppSQL.txt` to `InteractiveCardsWebAppSQL.sql`. @done(19-09-05 15:55)
+
+HTML / JS:
+✔ Amend column headings in `mlm.php` @done(19-09-05 16:53)
+✔ Amend attributes in `insertattributes.php` @done(19-09-05 17:02)
+✔ Amend atrributes in `request.php` (in `scgames/mesci`, `psct/mlm`. @done(19-09-05 17:05)
+
+Notes:
+Never *ever* call any variable or method 'getattrib'. 'getAttribute' is too common a thing to do in JS, and it makes it impossible to search for the method. Ugh ugh ugh.
+
