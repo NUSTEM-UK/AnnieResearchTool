@@ -43,13 +43,20 @@
           <option value='12'>December</option>
         </select>
 
+        <!-- TODO: Amend schools list @DONE  -->
         <select name="school" required>
           <option selected disabled>Select school...</option>
           <option value='0000'>Test School</option>
-          <option value='0021'>Chopwell</option>
+          <!-- <option value='0021'>Chopwell</option>
           <option value='0022'>Castletown</option>
           <option value='0023'>Morpeth Road</option>
           <option value='0024'>Albany Village</option>
+          <option value='0025'>Battle Hill Primary</option> -->
+          <option value='0026'>Barley Mow Primary</option>
+          <option value='0027'>Burradon Community Primary</option>
+          <option value='0028'>Chillingham Road Primary</option>
+          <option value='0029'>Kenton Bar Primary</option>
+          <option value='0030'>New York Primary</option>
         </select>
 
         <input type="submit" class="submit" value="To Activity">

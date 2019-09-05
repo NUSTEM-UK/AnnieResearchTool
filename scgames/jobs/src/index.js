@@ -194,6 +194,8 @@ $("#finish").click(function() {
   schoolId = pad(schoolId, 4);
 
   //Create ID
+  // TODO: Amend this per Annie's request.
+  // Need to encode name letters plain weirdly
   let id = fnameId+snameId+bdayId+bmonthId+schoolId;
 
   //If number of cards is correct insert data and link to next page
