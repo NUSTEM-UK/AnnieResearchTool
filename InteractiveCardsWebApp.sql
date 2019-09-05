@@ -36,16 +36,19 @@ CREATE TABLE careers_list(id VARCHAR(2) PRIMARY KEY, careers VARCHAR(20) NOT NUL
 
 CREATE TABLE attrib_list(id VARCHAR(20) PRIMARY KEY);
 
-SELECT max(id) FROM careers_feedback;
+-- TODO: What did these two lines ever do?
+-- TODO: Without them, the attrib_feedback table isn't needed. careers_feedback isn't used anyway.
+-- SELECT max(id) FROM careers_feedback;
+-- SELECT max(id) FROM attrib_feedback;
 
-SELECT max(id) FROM attrib_feedback;
-
+-- TODO: Are these lines leftover testing code?!
 INSERT INTO careers(id, unknown, liked, disliked, unsure) VALUES(:id, :unknown, :liked, :disliked, :unsure);
 
 INSERT INTO attrib(id, meclever, mecreative, mesensible, mestrange, mekind, mefun, mefriendly, mecool, mehardworking, sciclever, scicreative, scisensible, scistrange, scikind, scifun, scifriendly, scicool, scihardworking) 
 	VALUES(:id, :meclever, :mecreative, :mesensible, :mestrange, :mekind, :mefun, :mefriendly, :mecool, :mehardworking, :sciclever, :scicreative, :scisensible, :scistrange, :scikind, :scifun, :scifriendly, :scicool, :scihardworking);
 
-SELECT id, unknown, CONCAT(liked, disliked, unsure) AS known, liked, disliked, unsure FROM careers_feedback;
+-- TODO: This doesn't appear to do anything useful either
+-- SELECT id, unknown, CONCAT(liked, disliked, unsure) AS known, liked, disliked, unsure FROM careers_feedback;
 
 CREATE TRIGGER add_datetime_careers BEFORE INSERT ON careers
 	FOR EACH ROW SET NEW.timestamp = now();
