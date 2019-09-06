@@ -130,6 +130,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="src/artyom.window.min.js"></script>
     <script src="src/interaction.js"></script>
+	<script src="../src/shared.js"></script>
     <script src="src/index.js"></script>
   </body>
 </html>
