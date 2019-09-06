@@ -16,7 +16,7 @@ Primary research tool to improve data collection for the NUSTEM team. The compon
 
 - Use `InteractiveCardsWebAppSQL.txt` to set up the necessary SQL infrastructure
 - Run the `careersinsert.php` script to initialize the careers list for dynamic updates later
-- Ensure each of the subfolders has a version of `connect.php`
+- Ensure each of the subfolders has a version of `connect.php` (**update:** now refactored so there's One True connect.php script.)
 
 ## System overview
 
@@ -34,7 +34,7 @@ The project is split into 3 different directories:
 - The schools list can currently only be amended in the `index.html` file. They can be edited by changing the `options` in the `select` section of the form. *Future iterations are planned to have a more modular design.*
 - The careers list is pulled from the table to instantiate the cards as needed, any changes to the table on the database will update the list of careers. Currently, the file called `careerslist.txt` is being used to create this table.
     - CORRECTION: `careerslist.txt` isn't used anywhere. Jobs are hard-coded in `careersinsert.php`, but might as well edit the database directly.
-    - TODO: maybe change this?
+    - TODO: maybe change this? @DONE, ish.
 - There is currently no built-in way to separate the tools, future versions will have this feature. If the tools are to be used separately, they would need to be slightly redesigned to fit into a larger system. The two tools are in two independent folders, `mesci` and `skat` making this step easier - **currently WIP**
 
 ## ID Creation
