@@ -23,7 +23,8 @@ Primary research tool to improve data collection for the NUSTEM team. The compon
 The project is split into 3 different directories:
 
 - `scgames` contains the main web app used for research purposes in schools, accessible at [nustem.uk/r/scgames](https://nustem.uk/r/scgames/)
-- `psct` is an instance of the main app for the purposes of displaying its use to potential interested parties accessible at [nustem.uk/r/psct](https://nustem.uk/r/psct/) - **currently WIP**
+- `psct` is an instance of the main app for the purposes of displaying its use to potential interested parties accessible at [nustem.uk/r/psct](https://nustem.uk/r/psct/) - ~~**currently WIP**~~
+  - **NB. As of 2019-09-06 this version is no longer up-to-date.**
 - `drs` is the download app, it will display the links to download `.csv` files from the database
 - `careersinsert.php` inserts a list of careers into the *careers_list* table
 - `InteractiveCardsWebAppSQL.txt` contains all SQL statements necessary to set up database
