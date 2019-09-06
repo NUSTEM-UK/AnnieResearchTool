@@ -10,7 +10,7 @@ Primary research tool to improve data collection for the NUSTEM team. The compon
 
 - Runs on a MySQL and PHP capable server
 - Includes JQuery and the Google Speech Synthesis API
-- Utilizes Interact.js to implement dragging feature
+- Utilizes [Interact.js](https://interactjs.io) to implement dragging feature
 
 ## Bringing the system up
 
