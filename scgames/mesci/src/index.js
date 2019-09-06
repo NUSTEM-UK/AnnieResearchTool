@@ -138,6 +138,6 @@ $("#finish").click(function() {
       }
     });
   } else {
-    window.alert("Make sure to up everything in a box");
+    window.alert("Make sure to put everything in a box");
   }
 });
