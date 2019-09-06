@@ -49,12 +49,10 @@ Components to make up ID:
 
 Encoding procedure:
 
-- First name initial as number from 00 to 25
-- Last name initial as number from 00 to 25
+- First name initial as number: A-I coded as 91-99, remainder as 10-26.
+- Last name initial as number, as above.
 - Birth day as number from 01 to 31 (becomes "00" if no data is entered)
 - Birth month as number from 01 to 12 (becomes "00" if no data is entered)
 - School identifier based on the current system in use composed of 4 digits
 
-Creates a 12 digit identifier.
-
-TODO: Ivan. Point to name / function where this is created.
+Creates a 12 digit identifier. This code is mostly abstracted into `/scgames/src/shared.js`, but handled in each component's `index.js`. This should arguably be refactored so only the encoded data is passed around in the session.

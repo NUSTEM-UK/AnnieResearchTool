@@ -57,7 +57,7 @@
 					// 	print("\n");
 					// }
 
-	include('./scgames/connect.php');
+	include('./scgames/src/connect.php');
 
 	$conn = connect();
 	
