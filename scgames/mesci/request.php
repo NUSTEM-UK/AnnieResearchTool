@@ -30,7 +30,7 @@ if(isset($_REQUEST))
 	}
 
 	// Connect to BD
-	include('../connect.php');
+	include('../src/connect.php');
 
 	$conn = connect();
 

@@ -1,6 +1,7 @@
 <?php
 	// Connect to BD
-	include('connect.php');
+	// include('connect.php');
+	include('../scgames/src/connect.php');
 
 	$headers = array('id',
 					 'meclever',
