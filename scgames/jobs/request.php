@@ -13,7 +13,7 @@ if(isset($_REQUEST))
 	$uncertain = ($_POST['uncertain'] ?: NULL);	
 
 	// Connect to BD
-	include('../connect.php');
+	include('../src/connect.php');
 
 	$conn = connect();
 

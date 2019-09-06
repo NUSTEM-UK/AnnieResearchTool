@@ -3,31 +3,31 @@ var numCards = 0;
 var canPlay = false;
 
 artyom.initialize({
-    lang:"en-GB",
-	debug: false
-})
+  lang: "en-GB",
+  debug: false
+});
 
 //Load all careers in careers table
 $.ajax({
   type: "post",
   url: "https://nustem.uk/r/scgames/jobs/getcareers.php",
-  success: function(data){
-  console.log(data);
-  var cardtext = data.split("%").reverse();
-  numCards = cardtext.length - 1;
-  
-  cardtext.forEach(function(card) {
-    card = card.split(",");
-    console.log(card);
-    if(card[0]){
-    let div = document.createElement("div");
-    div.classList.add("drag-drop1");
-    div.id = card[0];
-    div.innerHTML = card[1];
+  success: function(data) {
+    console.log(data);
+    var cardtext = data.split("%").reverse();
+    numCards = cardtext.length - 1;
 
-    document.querySelector("#start-dropzone").appendChild(div);
-    }
-  });
+    cardtext.forEach(function(card) {
+      card = card.split(",");
+      console.log(card);
+      if (card[0]) {
+        let div = document.createElement("div");
+        div.classList.add("drag-drop1");
+        div.id = card[0];
+        div.innerHTML = card[1];
+
+        document.querySelector("#start-dropzone").appendChild(div);
+      }
+    });
   }
 });
 
@@ -50,10 +50,10 @@ interact(".dropzone").dropzone({
     dropzoneElement.classList.add("drop-target");
     draggableElement.classList.add("can-drop");
     draggableElement.classList.add(dropzoneElement.id);
-	
-	if(dropzoneElement.id == "playsound-dropzone") {
-		cardSpeak(event);
-	}
+
+    if (dropzoneElement.id == "playsound-dropzone") {
+      cardSpeak(event);
+    }
   },
   ondragleave: function(event) {
     // remove the drop feedback style
@@ -92,19 +92,12 @@ interact(".drag-drop2").draggable({
   onmove: dragMoveListener
 });
 
-// Pads a number with 0s to reach an expected amount
-function pad(n, width, z) {
-  z = z || '0';
-  n = n + '';
-  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-}
-
 // Play card name
 function cardSpeak(event) {
-	if (canPlay){
-	var eventCardText = event.relatedTarget.innerHTML;
-	artyom.say(eventCardText);
-	}
+  if (canPlay) {
+    var eventCardText = event.relatedTarget.innerHTML;
+    artyom.say(eventCardText);
+  }
 }
 
 // Update position as dragged
@@ -124,53 +117,48 @@ function dragMoveListener(event) {
 }
 
 // Switches TTS system on and off to help bypass iPad bug with google speech synthesis
-function allowSpeech () {
-	if (canPlay){
-		$('#sound').attr("src","img/NoSpeaker.png");
-		speechSynthesis.speak(new SpeechSynthesisUtterance('Goodbye'));
-		canPlay = false;
-	} else {
-		$('#sound').attr("src","img/Speaker.png");
-		speechSynthesis.speak(new SpeechSynthesisUtterance('Hello'));
-		canPlay = true;
-	}
+function allowSpeech() {
+  if (canPlay) {
+    $("#sound").attr("src", "img/NoSpeaker.png");
+    speechSynthesis.speak(new SpeechSynthesisUtterance("Goodbye"));
+    canPlay = false;
+  } else {
+    $("#sound").attr("src", "img/Speaker.png");
+    speechSynthesis.speak(new SpeechSynthesisUtterance("Hello"));
+    canPlay = true;
+  }
 }
-
-// Closes all overlays
-$(".close-overlay").click(function() {
-  document.querySelector("#overlay-wrapper").style.display = "none";
-});
 
 //JQuery function call on click of next button to create second tab
 $("#next").click(function() {
   //Get all sorted elements
   let knownEl = document.querySelectorAll("#dropboxes1 .known-dropzone");
   let unknownEl = document.querySelectorAll("#dropboxes1 .unknown-dropzone");
-  
-  //Ensure there is the full ammount of elements
-  if ((knownEl.length+unknownEl.length) == numCards) {
-	  let known = [];
-	  knownEl.forEach(function(element) {
-		known.push(element.id);
-	  });
-	  knownEl.forEach(function(card) {
-		let div = document.createElement("div");
-		div.classList.add("drag-drop2");
-		div.id = card.id;
-		div.innerHTML = card.innerHTML;
 
-		document.querySelector("#knownstart-dropzone").appendChild(div);
-	  });
-  
-	  document.querySelector("#dropboxes1").style.display = "none";
-	  document.querySelector("#dropboxes2").style.display = "flex";
-	  document.querySelector("#next").style.display = "none";
-	  document.querySelector("#finish").style.display = "block";
-	  document.querySelector(".page1").style.display = "none";
-	  document.querySelector(".page2").style.display = "block";
-      document.querySelector("#overlay-wrapper").style.display = "block";
+  //Ensure there is the full ammount of elements
+  if (knownEl.length + unknownEl.length == numCards) {
+    let known = [];
+    knownEl.forEach(function(element) {
+      known.push(element.id);
+    });
+    knownEl.forEach(function(card) {
+      let div = document.createElement("div");
+      div.classList.add("drag-drop2");
+      div.id = card.id;
+      div.innerHTML = card.innerHTML;
+
+      document.querySelector("#knownstart-dropzone").appendChild(div);
+    });
+
+    document.querySelector("#dropboxes1").style.display = "none";
+    document.querySelector("#dropboxes2").style.display = "flex";
+    document.querySelector("#next").style.display = "none";
+    document.querySelector("#finish").style.display = "block";
+    document.querySelector(".page1").style.display = "none";
+    document.querySelector(".page2").style.display = "block";
+    document.querySelector("#overlay-wrapper").style.display = "block";
   } else {
-	  window.alert("Make sure to put everything in a box");
+    window.alert("Make sure to put everything in a box");
   }
 });
 
@@ -179,7 +167,9 @@ $("#finish").click(function() {
   let unknownEl = document.querySelectorAll("#dropboxes1 .unknown-dropzone");
   let likedEl = document.querySelectorAll("#dropboxes2 .liked-dropzone");
   let dislikedEl = document.querySelectorAll("#dropboxes2 .disliked-dropzone");
-  let uncertainEl = document.querySelectorAll("#dropboxes2 .uncertain-dropzone");
+  let uncertainEl = document.querySelectorAll(
+    "#dropboxes2 .uncertain-dropzone"
+  );
 
   let fnameId = $("#hidden-data .fname").val();
   let snameId = $("#hidden-data .lname").val();
@@ -187,62 +177,72 @@ $("#finish").click(function() {
   let bmonthId = $("#hidden-data .bmonth").val();
   let schoolId = $("#hidden-data .school").val();
 
-  fnameId = pad((fnameId.substring(0, 1).toLowerCase().charCodeAt(0)-97), 2);
-  snameId = pad((snameId.substring(0, 1).toLowerCase().charCodeAt(0)-97), 2);
+  fnameId = encodeLetter(fnameId);
+  snameId = encodeLetter(snameId);
+  // fnameId = pad((fnameId.substring(0, 1).toLowerCase().charCodeAt(0)-97), 2);
+  // snameId = pad((snameId.substring(0, 1).toLowerCase().charCodeAt(0)-97), 2);
   bdayId = pad(bdayId, 2);
   bmonthId = pad(bmonthId, 2);
   schoolId = pad(schoolId, 4);
 
   //Create ID
-  let id = fnameId+snameId+bdayId+bmonthId+schoolId;
+  // TODO: Amend this per Annie's request. @DONE
+  // Need to encode name letters plain weirdly
+  let id = fnameId + snameId + bdayId + bmonthId + schoolId;
 
   //If number of cards is correct insert data and link to next page
-  if ((unknownEl.length+likedEl.length+dislikedEl.length+uncertainEl.length) == numCards) {
-	  let unknown = [];
-	  let liked = [];
-	  let disliked = [];
-	  let uncertain = [];
+  if (
+    unknownEl.length +
+      likedEl.length +
+      dislikedEl.length +
+      uncertainEl.length ==
+    numCards
+  ) {
+    let unknown = [];
+    let liked = [];
+    let disliked = [];
+    let uncertain = [];
 
-	  unknownEl.forEach(function(element) {
-		unknown.push(element.id);
-	  });
-	  likedEl.forEach(function(element) {
-		liked.push(element.id);
-	  });
-	  dislikedEl.forEach(function(element) {
-		disliked.push(element.id);
-	  });
-	  uncertainEl.forEach(function(element) {
-		uncertain.push(element.id);
-	  });
+    unknownEl.forEach(function(element) {
+      unknown.push(element.id);
+    });
+    likedEl.forEach(function(element) {
+      liked.push(element.id);
+    });
+    dislikedEl.forEach(function(element) {
+      disliked.push(element.id);
+    });
+    uncertainEl.forEach(function(element) {
+      uncertain.push(element.id);
+    });
 
-	  document.querySelector("#dropboxes2").style.display = "none";
-	  document.querySelector("#footer").style.display = "none";
+    document.querySelector("#dropboxes2").style.display = "none";
+    document.querySelector("#footer").style.display = "none";
 
     //Create data array
-	  let data = {
-	  	id: id,
-  		unknowncards: unknown.toString(),
-  		likedcards: liked.toString(),
-  		dislikedcards: disliked.toString(),
-  		uncertain: uncertain.toString()
-	  };
-	  
+    let data = {
+      id: id,
+      unknowncards: unknown.toString(),
+      likedcards: liked.toString(),
+      dislikedcards: disliked.toString(),
+      uncertain: uncertain.toString()
+    };
+
     //AJAX request to insert, on success links to next
-	  $.ajax({
-		data: data,
-		type: "post",
-		url: "https://nustem.uk/r/scgames/jobs/request.php",
-		success: function(data){
-      // Displays alert if there is and error
-      if (data != "00000"){
-        window.alert("Error Code : " + data);
-      } else {
-        window.location.replace("https://nustem.uk/r/scgames/mesci");
+    $.ajax({
+      data: data,
+      type: "post",
+      url: "https://nustem.uk/r/scgames/jobs/request.php",
+      success: function(data) {
+        // Displays alert if there is and error
+        if (data != "00000") {
+          window.alert("Error Code : " + data);
+        } else {
+          window.location.replace("https://nustem.uk/r/scgames/mesci");
+        }
       }
-		}
-	  });
+    });
   } else {
-	   window.alert("Make sure to put everything in a box");
+    window.alert("Make sure to put everything in a box");
   }
 });
