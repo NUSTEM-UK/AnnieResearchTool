@@ -30,14 +30,14 @@ if(isset($_REQUEST))
 	}
 
 	// Connect to BD
-	include('../connect.php');
+	include('../src/connect.php');
 
 	$conn = connect();
 
-	$stmt = $conn -> prepare("INSERT INTO attrib(id, meclever, mecreative, mepatient, mebrave, mehelpful, mefun, mefriendly, mecurious, mehardworking, sciclever, scicreative, scipatient, scibrave, scihelpful, scifun, scifriendly, scicurious, scihardworking) 
-	VALUES(:id, :meclever, :mecreative, :mepatient, :mebrave, :mehelpful, :mefun, :mefriendly, :mecurious, :mehardworking, :sciclever, :scicreative, :scipatient, :scibrave, :scihelpful, :scifun, :scifriendly, :scicurious, :scihardworking);");
+	$stmt = $conn -> prepare("INSERT INTO attrib(id, meclever, mecreative, mesensible, mestrange, mekind, mefun, mefriendly, mecool, mehardworking, sciclever, scicreative, scisensible, scistrange, scikind, scifun, scifriendly, scicool, scihardworking) 
+	VALUES(:id, :meclever, :mecreative, :mesensible, :mestrange, :mekind, :mefun, :mefriendly, :mecool, :mehardworking, :sciclever, :scicreative, :scisensible, :scistrange, :scikind, :scifun, :scifriendly, :scicool, :scihardworking);");
 
-	$stmt -> execute([':id' => $id, ':meclever' => $meNum[1], ':mecreative' => $meNum[2], ':mepatient' => $meNum[8], ':mebrave' => $meNum[0], ':mehelpful' => $meNum[7], ':mefun' => $meNum[5], ':mefriendly' => $meNum[4], ':mecurious' => $meNum[3], ':mehardworking' => $meNum[6], ':sciclever' => $sciNum[1], ':scicreative' => $sciNum[2], ':scipatient' => $sciNum[8], ':scibrave' => $sciNum[0], ':scihelpful' => $sciNum[7], ':scifun' => $sciNum[5], ':scifriendly' => $sciNum[4], ':scicurious' => $sciNum[3], ':scihardworking' => $sciNum[6]]);
+	$stmt -> execute([':id' => $id, ':meclever' => $meNum[1], ':mecreative' => $meNum[2], ':mesensible' => $meNum[8], ':mestrange' => $meNum[0], ':mekind' => $meNum[7], ':mefun' => $meNum[5], ':mefriendly' => $meNum[4], ':mecool' => $meNum[3], ':mehardworking' => $meNum[6], ':sciclever' => $sciNum[1], ':scicreative' => $sciNum[2], ':scisensible' => $sciNum[8], ':scistrange' => $sciNum[0], ':scikind' => $sciNum[7], ':scifun' => $sciNum[5], ':scifriendly' => $sciNum[4], ':scicool' => $sciNum[3], ':scihardworking' => $sciNum[6]]);
 
 	$errorCode = $stmt->errorInfo();
 

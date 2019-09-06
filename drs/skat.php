@@ -1,6 +1,6 @@
 <?php
     // Connect to BD
-	include('connect.php');
+	include('../scgames/src/connect.php');
 
     $ids = array();
 	$careers = array();
