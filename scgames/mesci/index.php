@@ -1,6 +1,3 @@
-
-
-<!DOCTYPE html>
 <html>
   <head>
     <title>Most Like Me/Most Like a Scientist</title>
