@@ -74,4 +74,8 @@ Never *ever* call any variable or method 'getattrib'. 'getAttribute' is too comm
     ✔ SQL submission error on `request.php` (final data submission). @done(19-09-09 15:19)
         Was due to non-updated SET data in the careers table. Fixed by repairing SQL and tearing database down again.
     ✔ Reset SQL tables so they use auto-incrementing INT as PRIMARY KEY, to avoid bug where two children parse to the same ID. @done(19-09-09 15:19)
-    ☐ Error in diamond nine: there's nothing in `attrib_list` to load and parse.
+    ✔ Error in diamond nine: there's nothing in `attrib_list` to load and parse. Fixed by inserting the data @started(19-09-09 16:05) @done(19-09-09 16:05) @lasted(37s)
+    ✔ `mesci/index.php` had a DOCTYPE set; this breaks dragging unless explicit use is made of pixel measures. See https://stackoverflow.com/questions/11384336/javascripts-not-working-when-doctype-html-inserted-in-correct-format. Line removed for more lenient browser parsing. @done(19-09-09 16:06)
+
+☐ Looks to me like the SKAT data export is plain wrong; it's not ordering the careers by anything, so there's no guarantee that each row matches the order of the CSV headers. I was worried about this.
+☐ SKAT and MSM export also don't guarantee to export _all_ entries (not sure how), and something weird's already happened in testing.
