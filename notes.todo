@@ -49,10 +49,29 @@ HTML / JS:
 
 Change ID coding:
 ☐ In `("#finish").click` in:
-    ☐ /mlm/src/index.js
-    ☐ /skat/src/index.js
+    ☐ /mlm/src/index.js -- nope, that's in psct
+    ☐ /skat/src/index.js -- nope, that's in psct
+    ✔ scgames/jobs/src/index.js @done(19-09-09 12:44)
+    ✔ scgames/mesci/src/index.js @done(19-09-09 12:44)
     ...because obviously it isn't refactored.
 
 Notes:
 Never *ever* call any variable or method 'getattrib'. 'getAttribute' is too common a thing to do in JS, and it makes it impossible to search for the method. Ugh ugh ugh.
 
+
+## Deploy:
+
+✔ Back up existing content in `/r` @done(19-09-09 12:45)
+✔ Tear down @done(19-09-09 12:46)
+✔ Rebuild from github @done(19-09-09 12:46)
+✔ Backup database @done(19-09-09 12:53)
+    Note that the triggers are stored in `information_schema`, not in the main table.
+✔ Empty database (Sequel Pro) @done(19-09-09 12:54)
+✔ Re-populate database from `InteractiveCardsWebApp.sql` @done(19-09-09 12:57)
+✔ Re-populate with `careersinsert.php` (via web browser) @done(19-09-09 14:03)
+☐ Debug:
+    ✔ Permissions error on `/scgames/src/connect.php` (had to be 644, or including PHP from JS didn't work). @done(19-09-09 14:04)
+    ✔ SQL submission error on `request.php` (final data submission). @done(19-09-09 15:19)
+        Was due to non-updated SET data in the careers table. Fixed by repairing SQL and tearing database down again.
+    ✔ Reset SQL tables so they use auto-incrementing INT as PRIMARY KEY, to avoid bug where two children parse to the same ID. @done(19-09-09 15:19)
+    ☐ Error in diamond nine: there's nothing in `attrib_list` to load and parse.

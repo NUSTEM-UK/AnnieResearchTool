@@ -19,10 +19,10 @@ if(isset($_REQUEST))
 
 	$stmt = $conn -> prepare("INSERT INTO careers(id, unknown, liked, disliked, unsure) VALUES(:id, :unknown, :liked, :disliked, :unsure);");
 	$stmt -> execute([':id' => $id, ':liked' => $liked,  ':unknown' => $unknown, ':disliked' => $disliked, ':unsure' => $uncertain]);
-
+	// $stmt -> debugDumpParams(); // Spew raw SQL into the popup dialog so we can see what's going on (comment out for production)
 	$errorCode = $stmt->errorInfo();
 
-	// Returns error code top be sent as allert if not expected
+	// Returns error code top be sent as alert if not expected
 	echo $errorCode[0];
 }
 ?>
