@@ -4,7 +4,7 @@ if(isset($_REQUEST))
 {
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
+	// error_reporting(E_ALL);
 
 	// Import from AJAX post
 	$id = ($_POST['id'] ?: NULL);
@@ -13,10 +13,10 @@ if(isset($_REQUEST))
 	$meId = ($_POST['meId'] ?: NULL);
 	$meRow = ($_POST['meRow'] ?: NULL);
 
-	error_log($sciRow, 0);
-	error_log($sciId, 0);
-	error_log($meRow, 0);
-	error_log($meId, 0);
+	// error_log($sciRow, 0);
+	// error_log($sciId, 0);
+	// error_log($meRow, 0);
+	// error_log($meId, 0);
 
 	// Split string into array
 	$sciId = explode("," ,$sciId);

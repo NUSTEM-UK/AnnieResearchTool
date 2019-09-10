@@ -88,6 +88,8 @@ $("#finish").click(function() {
     meId.push(element.id);
   });
 
+  // These sorts cause mayhem; we need the boxes in a known order, but nothing else assumes
+  // alphabetical sorting. So the database writes were, basically, jargon.
   sciId.sort();
   meId.sort();
 
