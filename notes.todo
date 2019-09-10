@@ -82,8 +82,8 @@ Never *ever* call any variable or method 'getattrib'. 'getAttribute' is too comm
     ☐ I think this is colliding user IDs. Unlikely to be an issue in practice?
 
 More significant: the most like me / scientist tool is mis-storing the data. Looking for issues:
-    ☐ request.php `$stmt -> execute` line accesses the arrays in an odd order. May be incorrect?
-        ☐ May be incorrect, but it's not obvious that the error here is the cause of what we're seeing.
-
+    ✔ request.php `$stmt -> execute` line accesses the arrays in an odd order. May be incorrect? @done(19-09-10 15:49)
+        ✔ May be incorrect, but it's not obvious that the error here is the cause of what we're seeing. @done(19-09-10 15:49)
+    ✔ Yes, that was it: `$stmt -> execute` line needs to access `$meNum` and `$sciNum` alphabetically-indexed for attribute values, thanks to the `sort()` calls in `index.js`. @done(19-09-10 15:51)
 
 As of 2019-09-10 explorations, looks like the 31st job produced by the SKAT reporting tool is benign; it's the coded value associated with the first empty response box. While we've no idea why that's being output, it doesn't appear to be interfering with the collected data.

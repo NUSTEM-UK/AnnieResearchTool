@@ -30,12 +30,12 @@ if(isset($_REQUEST))
 	foreach ($sciRow as $rowId) {
     	array_push($sciNum, (int)substr($rowId, -1));
 	}
-	error_log(print_r($sciNum), 0);
+	// error_log(print_r($sciNum), 0);
 
 	foreach ($meRow as $rowId) {
     	array_push($meNum, (int)substr($rowId, -1));
 	}
-	error_log(print_r($meNum), 0);
+	// error_log(print_r($meNum), 0);
 
 	// Connect to BD
 	include('../src/connect.php');
@@ -44,7 +44,28 @@ if(isset($_REQUEST))
 
 	$stmt = $conn -> prepare("INSERT INTO attrib(id, meclever, mecreative, mesensible, mestrange, mekind, mefun, mefriendly, mecool, mehardworking, sciclever, scicreative, scisensible, scistrange, scikind, scifun, scifriendly, scicool, scihardworking) 
 	VALUES(:id, :meclever, :mecreative, :mesensible, :mestrange, :mekind, :mefun, :mefriendly, :mecool, :mehardworking, :sciclever, :scicreative, :scisensible, :scistrange, :scikind, :scifun, :scifriendly, :scicool, :scihardworking);");
-	$stmt -> execute([':id' => $id, ':meclever' => $meNum[1], ':mecreative' => $meNum[2], ':mesensible' => $meNum[8], ':mestrange' => $meNum[0], ':mekind' => $meNum[7], ':mefun' => $meNum[5], ':mefriendly' => $meNum[4], ':mecool' => $meNum[3], ':mehardworking' => $meNum[6], ':sciclever' => $sciNum[1], ':scicreative' => $sciNum[2], ':scisensible' => $sciNum[8], ':scistrange' => $sciNum[0], ':scikind' => $sciNum[7], ':scifun' => $sciNum[5], ':scifriendly' => $sciNum[4], ':scicool' => $sciNum[3], ':scihardworking' => $sciNum[6]]);
+	
+	// Array data has been ordered alphabetically before being being passed in here, so needs to be referenced as such.
+	// (This was source of a huge bug, as the code otherwise assumes a fixed attribute order; this is the only place it's been sorted.
+	// TODO: Replace entire data structure with key:value dictionaries, for the sake of data integrity.
+	$stmt -> execute([':id' => $id, ':meclever' => $meNum[0], 
+									':mecreative' => $meNum[2], 
+									':mesensible' => $meNum[7], 
+									':mestrange' => $meNum[8], 
+									':mekind' => $meNum[6], 
+									':mefun' => $meNum[4], 
+									':mefriendly' => $meNum[3], 
+									':mecool' => $meNum[1], 
+									':mehardworking' => $meNum[5], 
+									':sciclever' => $sciNum[0], 
+									':scicreative' => $sciNum[2], 
+									':scisensible' => $sciNum[7], 
+									':scistrange' => $sciNum[8], 
+									':scikind' => $sciNum[6], 
+									':scifun' => $sciNum[4], 
+									':scifriendly' => $sciNum[3], 
+									':scicool' => $sciNum[1], 
+									':scihardworking' => $sciNum[5]]);
 	// $stmt -> debugDumpParams(); // Spew raw SQL into the popup dialog so we can see what's going on (comment out for production)
 	
 	$errorCode = $stmt->errorInfo();
