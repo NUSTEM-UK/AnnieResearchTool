@@ -28,12 +28,12 @@ if(isset($_REQUEST))
 	foreach ($sciRow as $rowId) {
     	array_push($sciNum, (int)substr($rowId, -1));
 	}
-	error_log($sciNum, 0);
+	error_log(print_r($sciNum), 0);
 
 	foreach ($meRow as $rowId) {
     	array_push($meNum, (int)substr($rowId, -1));
 	}
-	error_log($meNum, 0);
+	error_log(print_r($meNum), 0);
 
 	// Connect to BD
 	include('../src/connect.php');
