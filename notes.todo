@@ -79,3 +79,11 @@ Never *ever* call any variable or method 'getattrib'. 'getAttribute' is too comm
 
 ☐ Looks to me like the SKAT data export is plain wrong; it's not ordering the careers by anything, so there's no guarantee that each row matches the order of the CSV headers. I was worried about this.
 ☐ SKAT and MSM export also don't guarantee to export _all_ entries (not sure how), and something weird's already happened in testing.
+    ☐ I think this is colliding user IDs. Unlikely to be an issue in practice?
+
+More significant: the most like me / scientist tool is mis-storing the data. Looking for issues:
+    ☐ request.php `$stmt -> execute` line accesses the arrays in an odd order. May be incorrect?
+        ☐ May be incorrect, but it's not obvious that the error here is the cause of what we're seeing.
+
+
+As of 2019-09-10 explorations, looks like the 31st job produced by the SKAT reporting tool is benign; it's the coded value associated with the first empty response box. While we've no idea why that's being output, it doesn't appear to be interfering with the collected data.
