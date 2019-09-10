@@ -13,9 +13,8 @@ if(isset($_REQUEST))
 	$meId = ($_POST['meId'] ?: NULL);
 	$meRow = ($_POST['meRow'] ?: NULL);
 
-	<script>
-		console.log(<?= json_encode($sciRow, $meRow); ?>);
-	</script>
+	error_log($sciRow, 0);
+	error_log($meRow, 0);
 
 	// Split string into array
 	$sciId = explode("," ,$sciId);
@@ -29,16 +28,12 @@ if(isset($_REQUEST))
 	foreach ($sciRow as $rowId) {
     	array_push($sciNum, (int)substr($rowId, -1));
 	}
-	<script>
-		console.log(<?= json_encode($sciNum); ?>);
-	</script>
+	error_log($sciNum, 0);
 
 	foreach ($meRow as $rowId) {
     	array_push($meNum, (int)substr($rowId, -1));
 	}
-	<script>
-		console.log(<?= json_encode($meNum); ?>);
-	</script>
+	error_log($meNum, 0);
 
 	// Connect to BD
 	include('../src/connect.php');
