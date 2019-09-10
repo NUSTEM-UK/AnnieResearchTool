@@ -14,7 +14,9 @@ if(isset($_REQUEST))
 	$meRow = ($_POST['meRow'] ?: NULL);
 
 	error_log($sciRow, 0);
+	error_log($sciId, 0);
 	error_log($meRow, 0);
+	error_log($meId, 0);
 
 	// Split string into array
 	$sciId = explode("," ,$sciId);
