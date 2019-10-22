@@ -1,9 +1,19 @@
 Changes for CITE project October 2019:
 
+// 
+
 ✔ Check everything up-to-date with `master` branch @done(19-10-22 11:40)
+✔ New branch: `oct19` @done(19-10-22 12:06)
 - Run through older `notes.todo` and populate tasks below.
     ✔ Initial pass @done(19-10-22 11:50);
     - harder than it looks. Gnats.
+
+✔ Make changes to `index.php` to handle additional data requests (see Wish List below) @done(19-10-22 12:26)
+- Can test using `php -S localhost:8000`
+✔ Requires changes to `redirect.php` -- add session assignments @done(19-10-22 12:26)
+✔ `redirect.php` has a hard-coded destination: @done(19-10-22 12:26)
+    ✔ Amend to `https://nustem.uk/r/stemkat/jobs/` (best practice is full URL, see https://www.php.net/manual/en/function.header.php) @done(19-10-22 12:26)
+
 
 Specific deployed code:
     ✔ Duplicate games to `/r/stemkat` @done(19-10-22 11:50)
