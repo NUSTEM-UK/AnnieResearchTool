@@ -1,0 +1,48 @@
+Changes for CITE project October 2019:
+
+✔ Check everything up-to-date with `master` branch @done(19-10-22 11:40)
+- Run through older `notes.todo` and populate tasks below.
+    ✔ Initial pass @done(19-10-22 11:50);
+    - harder than it looks. Gnats.
+
+Specific deployed code:
+    ✔ Duplicate games to `/r/stemkat` @done(19-10-22 11:50)
+    - index.php:
+        ✔ Change `title` @done(19-10-22 11:52);
+        ✔ Change `h1` @done(19-10-22 11:52);
+        - 
+    - Second database configured.
+    - Remove (disable) second game (stages three and four, the diamond nine)
+
+Jobs list:
+    - Do in `careersinsert.php` (top level)
+        - Implies: fork `careersinsert.php` to specific folder, change paths.
+        - Fork `InteractiveCardsWebApp.sql`.
+        - Amend `SET` inserts in `careers` table, `InteractiveCardsWebApp.sql`.
+    - Amend to:
+    - actor/actress, architect, artist, author, bank assistant, builder, care worker, chef/cook, computer programmer, delivery driver, doctor, engineer, factory worker, fashion designer, hairdresser, lawyer, manager, mechanic, nurse, office worker, pilot, police officer, scientist, shop assistant, social worker, sports coach, teacher, technician, vet, waiter/waitress. 
+
+Update schools list:
+    - Do in `stemkat/index.php`
+    - Amend to:
+    - [work in progress]
+
+Wish list:
+    Additional data on opening screen:
+        - Gender
+            ✔ In web page (`/stemkat/index.php`) @done(19-10-22 11:55);
+            - In 
+            - In SQL code  
+        - Year group
+            ✔ In web page (`/stemkat/index.php`) @done(19-10-22 12:01)
+            - In SQL code
+        - Like science questions
+            ✔ In web page (`/stemkat/index.php`) @done(19-10-22 12:01)
+            - In SQL code
+            - Refine to Likert? CSS?
+                - See for example https://codepen.io/Buttonpresser/pen/qiuIx
+        - Good at science questions
+            ✔ In web page (`/stemkat/index.php`) @done(19-10-22 12:01)
+            - In SQL code
+            - Refine to Likert? CSS?
+
