@@ -1,0 +1,139 @@
+Changes for CITE project October 2019:
+
+// 
+
+✔ Check everything up-to-date with `master` branch @done(19-10-22 11:40)
+✔ New branch: `oct19` @done(19-10-22 12:06)
+- Run through older `notes.todo` and populate tasks below.
+    ✔ Initial pass @done(19-10-22 11:50);
+    - harder than it looks. Gnats.
+
+✔ Make changes to `index.php` to handle additional data requests (see Wish List below) @done(19-10-22 12:26)
+- Can test using `php -S localhost:8000`
+✔ Requires changes to `redirect.php` -- add session assignments @done(19-10-22 12:26)
+✔ `redirect.php` has a hard-coded destination: @done(19-10-22 12:26)
+    ✔ Amend to `https://nustem.uk/r/stemkat/jobs/` (best practice is full URL, see https://www.php.net/manual/en/function.header.php) @done(19-10-22 12:26)
+
+`jobs/index.php`:
+    ✔ Add new session data @done(19-10-22 14:32)
+    ✔ Change redirect-if-no-session-data destination @done(19-10-22 14:33)
+    ✔ Add new session data to hidden form data @done(19-10-22 14:38)
+
+`src/shared.js`:
+    ✔ Doesn't seem to need amendments @done(19-10-22 14:45)
+
+`jobs/src/index.js`:
+    ✔ Loads `scgames/jobs/getcareers.php` - needs retargeting @done(19-10-22 14:55)
+    ✔ Amend `finish` function to handle additional data @done(19-10-22 14:58)
+    ✔ Amend redirect to next game (direct to EndScreen) @done(19-10-22 14:59)
+
+`jobs/src/connect.php`:
+    ✔ Added. @done(19-10-22 15:46)
+    - NB. Copy manually to deploy (excluded in `.gitignore`)
+    ✔ Change database name @done(19-10-22 15:47)
+    ✔ Manually create database: @done(19-10-22 15:53)
+        ✔ I'm going utf8mb4 here: server appears misconfigured and default to latin1_swedish_ci, which isn't right but seems to work in this case. Collation is utf8mb4_general_ci (case-insensitive searching). Needs to be done as root. @done(19-10-22 15:53)
+        ✔ Grant user `ivan` all privs on `penny` except `grant option`. @done(19-10-22 15:53)
+
+`jobs/getcareers.php`:
+    ✔ Change `connect.php` load path to `src/connect.php`. @done(19-10-22 15:55)
+    
+`jobs/request.php`:
+    ✔ Add variable load from form submission for additional data @done(19-10-22 16:00)
+    ✔ Load `connect.php` rather than generic @done(19-10-22 16:05)
+    ✔ Add new data to database write @done(19-10-22 16:05)
+    ✔ Add variables to database write key @done(19-10-22 16:05)
+
+`mesci/`:
+    ✔ Remove entirely @done(19-10-22 16:08)
+
+`EndScreen/`:
+    ✔ Change 'next player' destination. @done(19-10-22 16:08)
+
+Database skeleton:
+Database tables ('penny'):
+✔ Need to add `gender`, `yeargroup`, `likesci` and `goodsci` @done(19-10-22 16:28)
+✔ `stemkat_db_structure.sql` (started as copy of `InteractiveCardsWebApp.sql`: @done(19-10-22 16:44)
+    ✔ remove table `attrib` @done(19-10-22 16:18)
+    ✔ table `careers`: @done(19-10-22 16:44)
+        ✔ `DEFAULT CHARSET=utf8mb4` @done(19-10-22 16:19)
+        ✔ Add new fields @done(19-10-22 16:26)
+        ✔ Change `unknown`, `liked`, `disliked`, `unsure` to reflect new careers list @done(19-10-22 16:44)
+    ✔ table `scientistasp` - DELETE @done(19-10-22 16:26)
+    ✔ table `attrib_list` DELETE @done(19-10-22 16:27)
+    ✔ Remove `attrib` table trigger @done(19-10-22 16:28)
+
+
+Specific deployed code:
+    ✔ Duplicate games to `/r/stemkat` @done(19-10-22 11:50)
+    ✔ index.php: @done(19-10-22 14:29)
+        ✔ Change `title` @done(19-10-22 11:52);
+        ✔ Change `h1` @done(19-10-22 11:52);
+    ✔ Second database configured. @done(19-10-22 16:28)
+    ✔ Remove (disable) second game (stages three and four, the diamond nine) @done(19-10-22 16:28)
+
+Jobs list:
+    ✔ Do in `careersinsert.php` (top level) @done(19-10-22 16:46)
+        ✔ Implies: fork `careersinsert.php` to specific folder, change paths. @done(19-10-22 16:46)
+        ✔ Fork `InteractiveCardsWebApp.sql`. @done(19-10-22 16:46)
+        ✔ Amend `SET` inserts in `careers` table, `InteractiveCardsWebApp.sql`. @done(19-10-22 16:46)
+        ✔ Amend to: @done(19-10-22 16:46)
+            ✔ actor/actress, @done(19-10-22 16:34)
+            ✔ architect, @done(19-10-22 16:34)
+            ✔ artist, @done(19-10-22 16:34)
+            ✔ author, @done(19-10-22 16:34)
+            ✔ bank assistant, @done(19-10-22 16:34)
+            ✔ builder, @done(19-10-22 16:35)
+            ✔ care worker, @done(19-10-22 16:35)
+            ✔ chef/cook, @done(19-10-22 16:35)
+            ✔ computer programmer, @done(19-10-22 16:35)
+            ✔ delivery driver, @done(19-10-22 16:35)
+            ✔ doctor, @done(19-10-22 16:35)
+            ✔ engineer, @done(19-10-22 16:35)
+            ✔ factory worker, @done(19-10-22 16:35)
+            ✔ fashion designer, @done(19-10-22 16:35)
+            ✔ hairdresser, @done(19-10-22 16:35)
+            ✔ lawyer, @done(19-10-22 16:36)
+            ✔ manager, @done(19-10-22 16:36)
+            ✔ mechanic, @done(19-10-22 16:36)
+            ✔ nurse, @done(19-10-22 16:36)
+            ✔ office worker, @done(19-10-22 16:36)
+            ✔ pilot, @done(19-10-22 16:36)
+            ✔ police officer, @done(19-10-22 16:36)
+            ✔ scientist, @done(19-10-22 16:36)
+            ✔ shop assistant, @done(19-10-22 16:36)
+            ✔ social worker, @done(19-10-22 16:36)
+            ✔ sports coach, @done(19-10-22 16:36)
+            ✔ teacher, @done(19-10-22 16:36)
+            ✔ technician, @done(19-10-22 16:36)
+            ✔ vet, @done(19-10-22 16:36)
+            ✔ waiter/waitress @done(19-10-22 16:37)
+        ✔ Change include for `connect.php` @done(19-10-22 16:41)
+    ✔ Process SET data for `stemkat_db_structure.sql`: `grep -v -e '//'` is useful. @done(19-10-22 16:42)
+    ✔ TextMate really good for this, as ever. @done(19-10-22 16:42)
+    ✔ Change SET inserts in database structure. 'Add next selection' (CMD+D), then paste in new list. @done(19-10-22 16:44)
+    - This really should be dynamic, grrr.
+
+Update schools list:
+    - Do in `stemkat/index.php`
+    - Amend to:
+    - [work in progress]
+
+Wish list:
+    Additional data on opening screen:
+        ✔ Gender @done(19-10-22 16:29)
+            ✔ In web page (`/stemkat/index.php`) @done(19-10-22 11:55);
+            ✔ In SQL code @done(19-10-22 16:29)
+        ✔ Year group @done(19-10-22 16:29)
+            ✔ In web page (`/stemkat/index.php`) @done(19-10-22 12:01)
+            ✔ In SQL code @done(19-10-22 16:29)
+        - Like science questions
+            ✔ In web page (`/stemkat/index.php`) @done(19-10-22 12:01)
+            ✔ In SQL code @done(19-10-22 16:29)
+            - Refine to Likert? CSS?
+                - See for example https://codepen.io/Buttonpresser/pen/qiuIx
+        - Good at science questions
+            ✔ In web page (`/stemkat/index.php`) @done(19-10-22 12:01)
+            ✔ In SQL code @done(19-10-22 16:29)
+            - Refine to Likert? CSS?
+
