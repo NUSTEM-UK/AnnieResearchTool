@@ -1,6 +1,6 @@
 <?php
 	// Connect to DB
-	include('../src/connect.php');
+	include('src/connect.php');
 
 	$conn = connect();
 

@@ -17,10 +17,16 @@
       $bday = $_SESSION["bday"];
       $bmonth = $_SESSION["bmonth"];
       $school = ($_SESSION["school"] ?: NULL);
+      // Additions for CITE
+      $gender = $_SESSION["gender"];
+      $yeargroup = $_SESSION["yeargroup"];
+      $likesci = $_SESSION["likesci"];
+      $goodsci = $_SESSION["goodsci"];
 
-      // Sends back to begining if there is no session data
+      // Sends back to beginning if there is no session data
+      // Changed for CITE
       if ($fname == NULL) {
-        header("Location: https://nustem.uk/r/scgames/");
+        header("Location: https://nustem.uk/r/stemkat/");
       }
     ?>
   </head>
@@ -34,6 +40,11 @@
       <input type="number" name="bday" class="bday" value=<?php echo "'".$bday."'"; ?>>
       <input type="number" name="bmonth" class="bmonth" value=<?php echo "'".$bmonth."'"; ?>>
       <input type="text" name="school" class="school" value=<?php echo "'".$school."'"; ?>>
+      <!-- Additions for CITE -->
+      <input type="text" name="gender" class="gender" value=<?php echo"'".$gender."'"; ?>>
+      <input type="text" name="yeargroup" class="yeargroup" value=<?php echo"'".$yeargroup."'"; ?>>
+      <input type="text" name="likesci" class="likesci" value=<?php echo"'".$likesci."'"; ?>>
+      <input type="text" name="goodsci" class="goodsci" value=<?php echo"'".$goodsci."'"; ?>>
     </form>
 
     <!-- App to sort jobs -->

@@ -67,12 +67,12 @@
 
         <select name="yeargroup" required>
           <option selected disabled>I am in...</option>
-          <option value="year1">Year 1</option>
-          <option value="year2">Year 2</option>
-          <option value="year3">Year 3</option>
-          <option value="year4">Year 4</option>
-          <option value="year5">Year 5</option>
-          <option value="year6">Year 6</option>
+          <option value="1">Year 1</option>
+          <option value="2">Year 2</option>
+          <option value="3">Year 3</option>
+          <option value="4">Year 4</option>
+          <option value="5">Year 5</option>
+          <option value="6">Year 6</option>
         </select>
 
         <select name="likesci" required>

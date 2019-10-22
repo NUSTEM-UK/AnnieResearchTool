@@ -10,7 +10,7 @@ artyom.initialize({
 //Load all careers in careers table
 $.ajax({
   type: "post",
-  url: "https://nustem.uk/r/scgames/jobs/getcareers.php",
+  url: "https://nustem.uk/r/stemkat/jobs/getcareers.php",
   success: function(data) {
     console.log(data);
     var cardtext = data.split("%").reverse();
@@ -176,6 +176,12 @@ $("#finish").click(function() {
   let bdayId = $("#hidden-data .bday").val();
   let bmonthId = $("#hidden-data .bmonth").val();
   let schoolId = $("#hidden-data .school").val();
+  // Additions for CITE
+  let genderId = $("#hidden-data .gender").val();
+  let yeargroupId = $("#hidden-data .yeargroup").val();
+  let likesciId = $("#hidden-data .likesci").val();
+  let goodsciId = $("#hidden-data .goodsci").val();
+  
 
   fnameId = encodeLetter(fnameId);
   snameId = encodeLetter(snameId);
@@ -225,20 +231,25 @@ $("#finish").click(function() {
       unknowncards: unknown.toString(),
       likedcards: liked.toString(),
       dislikedcards: disliked.toString(),
-      uncertain: uncertain.toString()
+      uncertain: uncertain.toString(),
+      // Additions for CITE
+      gender: genderId,
+      yeargroup: yeargroupId,
+      likesci: likesciId,
+      goodsci: goodsciId
     };
 
     //AJAX request to insert, on success links to next
     $.ajax({
       data: data,
       type: "post",
-      url: "https://nustem.uk/r/scgames/jobs/request.php",
+      url: "https://nustem.uk/r/stemkat/jobs/request.php",
       success: function(data) {
-        // Displays alert if there is and error
+        // Displays alert if there is an error
         if (data != "00000") {
           window.alert("Error Code : " + data);
         } else {
-          window.location.replace("https://nustem.uk/r/scgames/mesci");
+          window.location.replace("https://nustem.uk/r/stemkat/EndScreen");
         }
       }
     });

@@ -11,14 +11,19 @@ if(isset($_REQUEST))
 	$liked = ($_POST['likedcards'] ?: NULL);
 	$disliked = ($_POST['dislikedcards'] ?: NULL);
 	$uncertain = ($_POST['uncertain'] ?: NULL);	
+	// Additions for CITE
+	$gender = ($_POST['gender'] ?: NULL);
+	$yeargroup = ($_POST['yeargroup'] ?: NULL);
+	$likesci = ($_POST['likesci'] ?: NULL);
+	$goodsci = ($_POST['goodsci'] ?: NULL);
 
 	// Connect to BD
-	include('../src/connect.php');
+	include('connect.php');
 
 	$conn = connect();
 
-	$stmt = $conn -> prepare("INSERT INTO careers(id, unknown, liked, disliked, unsure) VALUES(:id, :unknown, :liked, :disliked, :unsure);");
-	$stmt -> execute([':id' => $id, ':liked' => $liked,  ':unknown' => $unknown, ':disliked' => $disliked, ':unsure' => $uncertain]);
+	$stmt = $conn -> prepare("INSERT INTO careers(id, unknown, liked, disliked, unsure, gender, yeargroup, likesci, goodsci) VALUES(:id, :unknown, :liked, :disliked, :unsure, :gender, :yeargroup, :likesci, :goodsci);");
+	$stmt -> execute([':id' => $id, ':liked' => $liked,  ':unknown' => $unknown, ':disliked' => $disliked, ':unsure' => $uncertain, ':gender' => $gender, ':yeargroup' => $yeargroup, ':likesci' => $likesci, ':goodsci' => $goodsci]);
 	// $stmt -> debugDumpParams(); // Spew raw SQL into the popup dialog so we can see what's going on (comment out for production)
 	$errorCode = $stmt->errorInfo();
 
