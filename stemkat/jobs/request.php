@@ -17,8 +17,8 @@ if(isset($_REQUEST))
 	$likesci = ($_POST['likesci'] ?: NULL);
 	$goodsci = ($_POST['goodsci'] ?: NULL);
 
-	// Connect to BD
-	include('connect.php');
+	// Connect to DB
+	include('src/connect.php');
 
 	$conn = connect();
 
