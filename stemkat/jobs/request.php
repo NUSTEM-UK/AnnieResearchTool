@@ -18,7 +18,7 @@ if(isset($_REQUEST))
 	$goodsci = ($_POST['goodsci'] ?: NULL);
 
 	// Connect to DB
-	include('src/connect.php');
+	include('../src/connect.php');
 
 	$conn = connect();
 
