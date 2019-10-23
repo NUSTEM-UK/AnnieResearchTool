@@ -11,10 +11,10 @@ CREATE TABLE `careers`(
 	`disliked` SET('ac','ar','at','au','ba','bu','cw','ch','cp','dd','do','en','fw','fd','hd','la','ma','me','nu','ow','pi','po','sc','sa','sw','sp','te','tc','ve','wa'),
 	`unsure` SET('ac','ar','at','au','ba','bu','cw','ch','cp','dd','do','en','fw','fd','hd','la','ma','me','nu','ow','pi','po','sc','sa','sw','sp','te','tc','ve','wa'),
 	`timestamp` DATETIME NOT NULL,
-	'gender' CHAR(1),
-	'yeargroup' TINYINT(3) UNSIGNED NOT NULL,
-	'likesci' TINYINT(3) UNSIGNED NOT NULL,
-	'goodsci' TINYINT(3) UNSIGNED NOT NULL,
+	`gender` CHAR(1),
+	`yeargroup` TINYINT(3) UNSIGNED NOT NULL,
+	`likesci` TINYINT(3) UNSIGNED NOT NULL,
+	`goodsci` TINYINT(3) UNSIGNED NOT NULL,
 	PRIMARY KEY (`uniqueID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

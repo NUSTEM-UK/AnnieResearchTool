@@ -149,4 +149,10 @@ Reporting:
     - `skat.php`:
         ✔ Change connect script target @done(19-10-23 10:55)
         - Meh, not sure I understand this. But it looks like it might walk the data tree. We'll see.
-        
+
+Deploy:
+    ✔ git pull @done(19-10-23 11:06)
+    ✔ Create database @done(19-10-23 11:06)
+    ✔ Populate tables using `stemkat_db_structure.sql` @done(19-10-23 11:06)
+    ✔ Careers inserts via `careersinsert.php` @done(19-10-23 11:06)
+    - 
