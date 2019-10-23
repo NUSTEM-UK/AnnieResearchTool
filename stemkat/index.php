@@ -84,7 +84,7 @@
           <option value="4">I like science a lot</option>
         </select>
 
-        <select name="goodsci" id="">
+        <select name="goodsci" required>
           <option selected disabled>How good are you at science?</option>
           <option value="0">I'm not at all good at science</option>
           <option value="1">I'm not very good at science</option>
