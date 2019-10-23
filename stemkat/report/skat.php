@@ -48,10 +48,14 @@
     	}
 
         $data[$row['id']]['timestamp'] = $row['timestamp'];
+        $data[$row['id']]['gender'] = $row['gender'];
+        $data[$row['id']]['yeargroup'] = $row['yeargroup'];
+        $data[$row['id']]['likesci'] = $row['likesci'];
+        $data[$row['id']]['goodsci'] = $row['goodsci'];
     }
     
     // Return data in CSV format to download
-    echo "id,".implode(",", $careers).",timestamp\r\n";
+    echo "id,".implode(",", $careers).",timestamp,"."gender,"."yeargroup,"."likesci,"."goodsci"."\r\n";
 
     foreach ($data as $fields) {
         echo implode(",", $fields)."\r\n";
