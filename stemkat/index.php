@@ -77,20 +77,20 @@
 
         <select name="likesci" required>
           <option selected disabled>How much do you like science?</option>
-          <option value="0">I don't like science at all</option>
-          <option value="1">I don't like science very much</option>
-          <option value="2">I think science is just OK</option>
-          <option value="3">I quite like science</option>
-          <option value="4">I like science a lot</option>
+          <option value="1">I don't like science at all</option>
+          <option value="2">I don't like science very much</option>
+          <option value="3">I think science is just OK</option>
+          <option value="4">I quite like science</option>
+          <option value="5">I like science a lot</option>
         </select>
 
         <select name="goodsci" required>
           <option selected disabled>How good are you at science?</option>
-          <option value="0">I'm not at all good at science</option>
-          <option value="1">I'm not very good at science</option>
-          <option value="2">I'm just OK at science</option>
-          <option value="3">I'm quite good at science</option>
-          <option value="4">I'm very good at science</option>
+          <option value="1">I'm not at all good at science</option>
+          <option value="2">I'm not very good at science</option>
+          <option value="3">I'm just OK at science</option>
+          <option value="4">I'm quite good at science</option>
+          <option value="5">I'm very good at science</option>
         </select>
 
         <input type="submit" class="submit" value="To Activity">

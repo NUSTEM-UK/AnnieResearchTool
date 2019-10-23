@@ -24,10 +24,12 @@ if(isset($_REQUEST))
 
 	$stmt = $conn -> prepare("INSERT INTO careers(id, unknown, liked, disliked, unsure, gender, yeargroup, likesci, goodsci) VALUES(:id, :unknown, :liked, :disliked, :unsure, :gender, :yeargroup, :likesci, :goodsci);");
 	$stmt -> execute([':id' => $id, ':liked' => $liked,  ':unknown' => $unknown, ':disliked' => $disliked, ':unsure' => $uncertain, ':gender' => $gender, ':yeargroup' => $yeargroup, ':likesci' => $likesci, ':goodsci' => $goodsci]);
+	
 	// $stmt -> debugDumpParams(); // Spew raw SQL into the popup dialog so we can see what's going on (comment out for production)
 	$errorCode = $stmt->errorInfo();
 
 	// Returns error code top be sent as alert if not expected
+	// $stmt->debugDumpParams(); // Spit out the query string
 	echo $errorCode[0];
 }
 ?>

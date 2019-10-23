@@ -22,8 +22,8 @@
 	// Additions for CITE
 	$_SESSION["gender"]=$gender;
 	$_SESSION["yeargroup"]=$yeargroup;
-	$_SESSION["likesci"]=(int)$likesci;
-	$_SESSION["goodsci"]=(int)$goodsci;
+	$_SESSION["likesci"]=$likesci;
+	$_SESSION["goodsci"]=$goodsci;
 
 	// Link to jobs tool
 	header("Location: https://nustem.uk/r/stemkat/jobs/");

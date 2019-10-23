@@ -162,7 +162,7 @@ Bug nobbling:
     ✔ Turns out we have two `connect.php` scripts in `stemkat/`. Fix, and amend paths. Again. @done(19-10-23 11:54)
     - Lots of 'undefined index' errors in `stemkat/jobs/index.php`. Meh.
     - Throws a SQL 23000 error on write to DB: Integrity constraint violation.
-
+    ✔ DAMMIT a string '0' evaluates in PHP as NULL and hence can't be NOT NULL in SQL. :headdesk. Changed values on pulldown so they're 1-5 rather than 0-4. Yes, it really was that. FFS. @done(19-10-23 13:47)
 
 Tweaks:
     ✔ Instructions specify 'Game 1' at both stages. @done(19-10-23 12:11)
