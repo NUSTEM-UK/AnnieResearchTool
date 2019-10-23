@@ -18,10 +18,10 @@
       $bmonth = $_SESSION["bmonth"];
       $school = ($_SESSION["school"] ?: NULL);
       // Additions for CITE
-      $gender = $_SESSION["gender"];
-      $yeargroup = $_SESSION["yeargroup"];
-      $likesci = $_SESSION["likesci"];
-      $goodsci = $_SESSION["goodsci"];
+      $gender = $_SESSION["gender" ?: NULL];
+      $yeargroup = $_SESSION["yeargroup" ?: NULL];
+      $likesci = $_SESSION["likesci" ?: NULL];
+      $goodsci = $_SESSION["goodsci" ?: NULL];
 
       // Sends back to beginning if there is no session data
       // Changed for CITE
@@ -88,16 +88,16 @@
       <div class="overlay page1">
         <h1>Instructions : Game 1</h1>
         <p>Which of these jobs do you know?</p>
-        <p>Drag and drop all the jobs from the start box into either the ‘jobs I don’t know’ or ‘jobs I know’ box.</p>
-        <p>Drag a job into the sound box below to hear this word read aloud.</p>
+        <p>Drag and drop all the jobs from the start box into either ‘jobs I don’t know’ or ‘jobs I know’.</p>
+        <p>Drag a job into the sound box below to hear it read aloud.</p>
         <button type="submit" class="close-overlay">OK</button>
       </div>
 
       <div class="overlay page2">
-        <h1>Instructions : Game 1</h1>
-        <p>Which of these jobs would you like to do when your older?</p>
-        <p>Drag and drop all the jobs from the ‘jobs I know’ box into either ‘would not like to do’, ‘would like to do’ or ‘not sure’ boxes. </p>
-        <p>Drag a job into the sound box below to hear this word read aloud.</p>
+        <h1>Instructions : Game 2</h1>
+        <p>Which of these jobs would you like to do when you're older?</p>
+        <p>Drag and drop all the jobs from the ‘jobs I know’ box into ‘would not like to do’, ‘would like to do’ or ‘not sure’. </p>
+        <p>Drag a job into the sound box below to hear it read aloud.</p>
         <button type="submit" class="close-overlay">OK</button>
       </div>
     </div>

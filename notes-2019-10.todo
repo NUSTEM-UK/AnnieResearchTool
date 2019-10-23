@@ -157,6 +157,13 @@ Deploy:
     ✔ Careers inserts via `careersinsert.php` @done(19-10-23 11:06)
 
 Bug nobbling:
-    - 500 error on `getcareers.php`
+    ✔ 500 error on `getcareers.php` @done(19-10-23 11:54)
     - undefined index on `goodsci` in `redirect.php`, line 14
-    - Turns out we have two `connect.php` scripts in `stemkat/`. Fix, and amend paths. Again.
+    ✔ Turns out we have two `connect.php` scripts in `stemkat/`. Fix, and amend paths. Again. @done(19-10-23 11:54)
+    - Lots of 'undefined index' errors in `stemkat/jobs/index.php`. Meh.
+    - Throws a SQL 23000 error on write to DB: Integrity constraint violation.
+
+
+Tweaks:
+    ✔ Instructions specify 'Game 1' at both stages. @done(19-10-23 12:11)
+    ✔ Grammar in help boxes. @done(19-10-23 12:11)
