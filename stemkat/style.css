@@ -77,3 +77,26 @@ body {
 		width: 40%;
 	}
 }
+
+#download-files {
+	padding: 30px;
+	text-align: center;
+}
+
+#download-files button {
+	padding: 12px 24px;
+	font-size: 16px;
+	border-radius: 6px;
+	background-color: #f8971d;
+	border: 1px solid #919191;
+}
+
+#downlaod-files button:hover {
+	background-color: #de6739;
+	border: 1px solid black;
+}
+
+#download-files button:disabled {
+	border: 1px solid #919191;
+	background-color: #E3E3E3;
+}

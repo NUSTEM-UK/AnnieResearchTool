@@ -137,3 +137,16 @@ Wish list:
             ✔ In SQL code @done(19-10-22 16:29)
             - Refine to Likert? CSS?
 
+
+Reporting:
+    ✔ Duplicate `drs` directory under `stemkat/report` @done(19-10-23 10:28)
+    ✔ `index` to html, from php @done(19-10-23 10:33)
+    ✔ Retarget stylesheet @done(19-10-23 10:33)
+    ✔ Some stylesheet changes, remove duplicate element IDs. @done(19-10-23 10:40)
+    ✔ `download.js`: @done(19-10-23 10:52)
+        ✔ Change target URL @done(19-10-23 10:51)
+        ✔ Remove MLM download stuff. @done(19-10-23 10:52)
+    - `skat.php`:
+        ✔ Change connect script target @done(19-10-23 10:55)
+        - Meh, not sure I understand this. But it looks like it might walk the data tree. We'll see.
+        
