@@ -5,9 +5,10 @@
   <head>
     <title>NUSTEM Games for CITE</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/> -->
     <link rel="icon" type="image/png" href="img/NUSTEMSQR.jpg"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <?php
       // Start session to use as data storage to keep personal data
       session_start();
@@ -16,10 +17,16 @@
 
   <body>
 
-    <div id="content">
-    	<h1>STEMKAT: NUSTEM Games for CITE</h1>
-      <p>Hi... Welcome to NUSTEM's games pages. In a minute you will get to play two different games.</p>
-      <p>But before you get started please add your name, date of birth and school name below (name and dates will be used to create an anonymous identifier):</p>
+    <!-- <div id="content"> -->
+      <div class="jumbotron">
+        <h1 class="display-4">STEMKAT: NUSTEM Games for CITE</h1>
+        <p class="lead">Hello. Welcome to NUSTEM's games pages.</p>
+        <p>In a minute you will get to play two different games. But 
+          before you get started please add your name, date of birth 
+          and school name below (name and dates will be used to 
+          create an anonymous identifier):</p>
+
+      </div>
 
       <!-- Personal info form -->
       <form action="./redirect.php" method="post">
@@ -50,13 +57,21 @@
           <!-- <option value='0021'>Chopwell</option>
           <option value='0022'>Castletown</option>
           <option value='0023'>Morpeth Road</option>
-          <option value='0024'>Albany Village</option> -->
+          <option value='0024'>Albany Village</option>
           <option value='0025'>Battle Hill Primary</option>
           <option value='0026'>Barley Mow Primary</option>
           <option value='0027'>Burradon Community Primary</option>
           <option value='0028'>Chillingham Road Primary</option>
           <option value='0029'>Kenton Bar Primary</option>
-          <option value='0030'>New York Primary</option>
+          <option value='0030'>New York Primary</option> -->
+          <option value='0031'>St. Mary's RC Primary</option>
+          <option value='0032'>Cleadon C of E Primary</option>
+          <option value='0033'>Hadrian Park Primary</option>
+          <option value='0034'>South Hylton Primary Academy</option>
+          <option value='0035'>St. Mark's RC Primary </option>
+          <option value='0036'>Willow Fields Primary</option>
+          <option value='0037'>Holystone Primary</option>
+          <option value='0038'>Barnes Junior School</option>
         </select>
 
         <select name="gender" required>
@@ -95,7 +110,9 @@
 
         <input type="submit" class="submit" value="To Activity">
       </form>
-    </div>
-
+    <!-- </div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
