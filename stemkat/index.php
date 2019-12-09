@@ -5,10 +5,11 @@
   <head>
     <title>NUSTEM Games for CITE</title>
     <meta charset="UTF-8" />
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/> -->
     <link rel="icon" type="image/png" href="img/NUSTEMSQR.jpg"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link href="static/css/bootstrap-slate.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <?php
       // Start session to use as data storage to keep personal data
       session_start();
@@ -17,7 +18,6 @@
 
   <body>
 
-    <!-- <div id="content"> -->
       <div class="jumbotron">
         <h1 class="display-4">STEMKAT: NUSTEM Games for CITE</h1>
         <p class="lead">Hello. Welcome to NUSTEM's games pages.</p>
@@ -25,30 +25,35 @@
           before you get started please add your name, date of birth 
           and school name below (name and dates will be used to 
           create an anonymous identifier):</p>
-
       </div>
-
+    
       <!-- Personal info form -->
       <form action="./redirect.php" method="post">
-        <input type="text" name="fname" placeholder="First name..." required>
-        <input type="text" name="lname" placeholder="Last name..." required>
-        <input type="number" name="bday" min="1" max="31" placeholder="Birth day..."> <!-- Will allow selection of 31st day for any month -->
-
-        <select name="bmonth" required>
-          <option selected disabled>Birth month...</option>
-          <option value='01'>January</option>
-          <option value='02'>February</option>
-          <option value='03'>March</option>
-          <option value='04'>April</option>
-          <option value='05'>May</option>
-          <option value='06'>June</option>
-          <option value='07'>July</option>
-          <option value='08'>August</option>
-          <option value='09'>September</option>
-          <option value='10'>October</option>
-          <option value='11'>November</option>
-          <option value='12'>December</option>
-        </select>
+        <div class="form-group">
+        <fieldset>
+          <legend>Your name</legend>
+          <input type="text" name="fname" placeholder="First name..." required>
+          <input type="text" name="lname" placeholder="Last name..." required>
+        </fieldset>
+        <fieldset>
+          <legend>Your date of birth</legend>    
+          <input type="number" name="bday" min="1" max="31" placeholder="Birth day..."> <!-- Will allow selection of 31st day for any month -->
+          <select name="bmonth" required>
+            <option selected disabled>Birth month...</option>
+            <option value='01'>January</option>
+            <option value='02'>February</option>
+            <option value='03'>March</option>
+            <option value='04'>April</option>
+            <option value='05'>May</option>
+            <option value='06'>June</option>
+            <option value='07'>July</option>
+            <option value='08'>August</option>
+            <option value='09'>September</option>
+            <option value='10'>October</option>
+            <option value='11'>November</option>
+            <option value='12'>December</option>
+          </select>
+        </fieldset>
 
         <!-- TODO: Amend schools list -->
         <select name="school" required>
@@ -109,8 +114,8 @@
         </select>
 
         <input type="submit" class="submit" value="To Activity">
+        </div>
       </form>
-    <!-- </div> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
