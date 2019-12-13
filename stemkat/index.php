@@ -201,6 +201,37 @@
               </select>
             </div>
           </div> <!-- form-group row -- views -->
+          <div class="form-group">
+
+          </div> <!-- form-group row -- Likert-->
+            <legend>Your views (testing)</legend>
+            <div class="col">
+              <div class="form-group form-check">
+                <label>How much do you like science?</label>
+                <ul class="likert">
+                  <li>
+                    <input type="radio" class="form-check-input" name="likert" value="1" id="like1">
+                    <label for="like1">😄</label>
+                  </li>
+                  <li>
+                    <input type="radio" class="form-check-input" name="likert" value="2" id="like2">
+                    <label for="like2">🙂</label>
+                  </li>
+                  <li>
+                    <input type="radio" class="form-check-input" name="likert" value="3" id="like3">
+                    <label for="like3">😐</label>
+                  </li>
+                  <li>
+                    <input type="radio" class="form-check-input" name="likert" value="4" id="like4">
+                    <label for="like4">🙁</label>
+                  </li>
+                  <li>
+                    <input type="radio" class="form-check-input" name="likert" value="5" id="like5">
+                    <label for="like5">☹️</label>
+                  </li>
+                </ul>
+              </div> <!-- form-group -->
+            </div> <!-- col -->
           <div class="form-group row mt-5">
             <!-- <hr> -->
             <button type="submit" class="submit btn btn-warning" value="To Activity">To Activity</button>
