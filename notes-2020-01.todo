@@ -1,0 +1,33 @@
+General:
+☐ See `notes-2019-10.todo`
+
+Useful:
+☐ `php -S localhost:8000`
+
+CITE tools:
+☐ Clean up front page:
+    ☐ Marge in Bootstrap?
+    ☐ Layout front-page form
+    ☐ Enter full date of birth (& discard year)
+    ☐ Check Bootstrap CSS on remaining pages, possibly integrate throughout?
+☐ Double-check how we're computing unique respondent UD
+✔ Schools list: @done(19-12-09 14:06)
+    ✔ 0031 St. Mary's RC Primary @done(19-12-09 14:09)
+    ✔ 0032 Cleadon C of E Primary @done(19-12-09 14:09)
+    ✔ 0033 Hadrian Park Primary @done(19-12-09 14:09)
+    ✔ 0034 South Hylton Primary Academy @done(19-12-09 14:09)
+    ✔ 0035 St. Mark's RC Primary @done(19-12-09 14:09)
+    ✔ 0036 Willow Fields Primary @done(19-12-09 14:09)
+    ✔ 0037 Holystone Primary @done(19-12-09 14:09)
+    ✔ 0038 Barnes Junior School @done(19-12-09 14:09)
+☐ Tell Annie what the codings are for the schools
+☐ Build nice likert scale stuff: https://codepen.io/Buttonpresser/pen/qiuIx
+    
+
+Server:
+☐ URL rewrite: from /stemkat to /r/citeres, and /citeres to /r/citeres)
+
+Next campaign:
+☐ Build out using every job we've ever had, as a test, under /r/stemkat.
+☐ Tell Annie, see what we all think.
+
