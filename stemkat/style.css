@@ -117,9 +117,13 @@ form .likert li input[type=radio] {
 	margin-left: -6px;
 }
 
+#likert label {
+	font-size: 20px;
+}
+
 form .likert li label {
 	width:100%;
-	font-size: 36pt;
+	font-size: 36pt !important;
 }
 
 form .likert:before {
@@ -132,3 +136,4 @@ form .likert:before {
 	height: 4px;
 	width: 78%;
 }
+

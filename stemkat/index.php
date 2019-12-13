@@ -39,7 +39,7 @@
           <div class="row">
             <div class="col">
               <legend>Your name</legend>
-             </div>
+            </div>
             <div class="col">
               <legend>Your date of birth</legend>
             </div>
@@ -54,7 +54,7 @@
             <div class="col">
               <select class="form-control" name="bday" required>
                 <option selected disabled">Day</option>
-                <option value="01">1</option>
+                <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
                 <option value="04">04</option>
@@ -133,62 +133,60 @@
             </div>
             <div class="col"></div>
           </div>
-          <div class="form-group row">
+          <div class="row">
             <div class="col">
-                <legend>Your school</legend>
-              <!-- TODO: Amend schools list -->
-              <select name="school" class="form-control" required>
-                <option selected disabled>Select school...</option>
+              <legend>About you</legend>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-3">
+              <select name="gender" class="form-control" required>
+                  <option selected disabled>I am...</option>
+                  <option value="f">I am a girl</option>
+                  <option value="m">I am a boy</option>
+                </select>
+            </div>
+            <div class="col-3">
+            <select name="yeargroup" class="form-control" required>
+                <option selected disabled>...in year...</option>
+                <option value="1">...in year 1...</option>
+                <option value="2">...in year 2...</option>
+                <option value="3">...in year 3...</option>
+                <option value="4">...in year 4...</option>
+                <option value="5">...in year 5...</option>
+                <option value="6">...in year 6...</option>
+              </select>
+            </div>
+            <div class="col-6">
+            <select name="school" class="form-control" required>
+                <option selected disabled>...in school...</option>
                 <option value='0000'>Test School</option>
-                <!-- <option value='0021'>Chopwell</option>
-                <option value='0022'>Castletown</option>
-                <option value='0023'>Morpeth Road</option>
-                <option value='0024'>Albany Village</option>
-                <option value='0025'>Battle Hill Primary</option>
-                <option value='0026'>Barley Mow Primary</option>
-                <option value='0027'>Burradon Community Primary</option>
-                <option value='0028'>Chillingham Road Primary</option>
-                <option value='0029'>Kenton Bar Primary</option>
-                <option value='0030'>New York Primary</option> -->
-                <option value='0031'>St. Mary's RC Primary</option>
-                <option value='0032'>Cleadon C of E Primary</option>
-                <option value='0033'>Hadrian Park Primary</option>
-                <option value='0034'>South Hylton Primary Academy</option>
-                <option value='0035'>St. Mark's RC Primary </option>
-                <option value='0036'>Willow Fields Primary</option>
-                <option value='0037'>Holystone Primary</option>
-                <option value='0038'>Barnes Junior School</option>
+                <!-- <option value='0021'>...in Chopwell</option>
+                <option value='0022'>...in Castletown</option>
+                <option value='0023'>...in Morpeth Road</option>
+                <option value='0024'>...in Albany Village</option>
+                <option value='0025'>...in Battle Hill Primary</option>
+                <option value='0026'>...in Barley Mow Primary</option>
+                <option value='0027'>...in Burradon Community Primary</option>
+                <option value='0028'>...in Chillingham Road Primary</option>
+                <option value='0029'>...in Kenton Bar Primary</option>
+                <option value='0030'>...in New York Primary</option> -->
+                <option value='0031'>...in St. Mary's RC Primary</option>
+                <option value='0032'>...in Cleadon C of E Primary</option>
+                <option value='0033'>...in Hadrian Park Primary</option>
+                <option value='0034'>...in South Hylton Primary Academy</option>
+                <option value='0035'>...in St. Mark's RC Primary </option>
+                <option value='0036'>...in Willow Fields Primary</option>
+                <option value='0037'>...in Holystone Primary</option>
+                <option value='0038'>...in Barnes Junior School</option>
               </select>
             </div>
           </div> <!-- form-group row -- School -->
+
           <div class="form-group row">
             <div class="col">
-              
-              <div class="form-group">
-                  <legend>About you</legend>
-                <select name="gender" class="form-control" required>
-                  <option selected disabled>I am...</option>
-                  <option value="f">A girl</option>
-                  <option value="m">A boy</option>
-                </select>
-              </div>
-              <!-- <div class="form-group"> -->
-              <select name="yeargroup" class="form-control" required>
-                <option selected disabled>I am in...</option>
-                <option value="1">Year 1</option>
-                <option value="2">Year 2</option>
-                <option value="3">Year 3</option>
-                <option value="4">Year 4</option>
-                <option value="5">Year 5</option>
-                <option value="6">Year 6</option>
-              </select>
-              <!-- </div> -->
-            </div>
-          </div> <!-- form-group row -- about person -->
-          <div class="form-group row">
-            <div class="col">
-                <legend>Your views</legend>
-              <div class="form-group form-check">
+              <legend>Your views</legend>
+              <div class="form-group form-check" id="likert">
                 <label>How much do you like science?</label>
                 <ul class="likert">
                   <li>
