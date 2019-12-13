@@ -141,13 +141,13 @@
           <div class="form-group row">
             <div class="col-3">
               <select name="gender" class="form-control" required>
-                  <option selected disabled>I am...</option>
-                  <option value="f">I am a girl</option>
-                  <option value="m">I am a boy</option>
-                </select>
+                <option selected disabled>I am...</option>
+                <option value="f">I am a girl...</option>
+                <option value="m">I am a boy...</option>
+              </select>
             </div>
             <div class="col-3">
-            <select name="yeargroup" class="form-control" required>
+              <select name="yeargroup" class="form-control" required>
                 <option selected disabled>...in year...</option>
                 <option value="1">...in year 1...</option>
                 <option value="2">...in year 2...</option>
@@ -158,27 +158,27 @@
               </select>
             </div>
             <div class="col-6">
-            <select name="school" class="form-control" required>
+              <select name="school" class="form-control" required>
                 <option selected disabled>...in school...</option>
                 <option value='0000'>Test School</option>
                 <!-- <option value='0021'>...in Chopwell</option>
-                <option value='0022'>...in Castletown</option>
-                <option value='0023'>...in Morpeth Road</option>
-                <option value='0024'>...in Albany Village</option>
-                <option value='0025'>...in Battle Hill Primary</option>
-                <option value='0026'>...in Barley Mow Primary</option>
-                <option value='0027'>...in Burradon Community Primary</option>
-                <option value='0028'>...in Chillingham Road Primary</option>
-                <option value='0029'>...in Kenton Bar Primary</option>
-                <option value='0030'>...in New York Primary</option> -->
-                <option value='0031'>...in St. Mary's RC Primary</option>
-                <option value='0032'>...in Cleadon C of E Primary</option>
-                <option value='0033'>...in Hadrian Park Primary</option>
-                <option value='0034'>...in South Hylton Primary Academy</option>
-                <option value='0035'>...in St. Mark's RC Primary </option>
-                <option value='0036'>...in Willow Fields Primary</option>
-                <option value='0037'>...in Holystone Primary</option>
-                <option value='0038'>...in Barnes Junior School</option>
+                <option value='0022'>...in Castletown.</option>
+                <option value='0023'>...in Morpeth Road.</option>
+                <option value='0024'>...in Albany Village.</option>
+                <option value='0025'>...in Battle Hill Primary.</option>
+                <option value='0026'>...in Barley Mow Primary.</option>
+                <option value='0027'>...in Burradon Community Primary.</option>
+                <option value='0028'>...in Chillingham Road Primary.</option>
+                <option value='0029'>...in Kenton Bar Primary.</option>
+                <option value='0030'>...in New York Primary</opti.on> -->
+                <option value='0031'>...in St. Mary's RC Primary.</option>
+                <option value='0032'>...in Cleadon C of E Primary.</option>
+                <option value='0033'>...in Hadrian Park Primary.</option>
+                <option value='0034'>...in South Hylton Primary Academy.</option>
+                <option value='0035'>...in St. Mark's RC Primary .</option>
+                <option value='0036'>...in Willow Fields Primary.</option>
+                <option value='0037'>...in Holystone Primary.</option>
+                <option value='0038'>...in Barnes Junior School.</option>
               </select>
             </div>
           </div> <!-- form-group row -- School -->
@@ -236,10 +236,10 @@
               </div> <!-- form-group -->
             </div> <!-- col -->
           </div> <!-- form-group row -->
-          <div class="form-group row mt-5">
-            <!-- <hr> -->
-            <button type="submit" class="submit btn btn-warning" value="To Activity">To Activity</button>
-
+          <div class="form-group row">
+            <div class="col">
+              <button type="submit" class="submit btn btn-warning" value="To Activity">To Activity</button>
+            </div>
           </div>
         </form>
       </div>

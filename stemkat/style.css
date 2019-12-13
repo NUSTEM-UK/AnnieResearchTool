@@ -91,7 +91,7 @@ body {
 	border: 1px solid #919191;
 }
 
-#downlaod-files button:hover {
+#download-files button:hover {
 	background-color: #de6739;
 	border: 1px solid black;
 }
@@ -101,7 +101,10 @@ body {
 	background-color: #E3E3E3;
 }
 
-/* Likert stuff */
+/* Likert stuff 
+   Leaning on: https://codepen.io/Buttonpresser/pen/qiuIx
+*/
+
 form .likert li {
 	display: inline-block;
 	width: 19%;
@@ -118,7 +121,7 @@ form .likert li input[type=radio] {
 }
 
 #likert label {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 form .likert li label {
