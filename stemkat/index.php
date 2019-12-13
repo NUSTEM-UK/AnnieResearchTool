@@ -180,69 +180,69 @@
           <div class="form-group row">
             <legend>Your views</legend>
             <div class="col">
-
-              <div class="form-group">
-                <select name="likesci" class="form-control" required>
-                  <option selected disabled>How much do you like science?</option>
-                  <option value="1">I don't like science at all</option>
-                  <option value="2">I don't like science very much</option>
-                  <option value="3">I think science is just OK</option>
-                  <option value="4">I quite like science</option>
-                  <option value="5">I like science a lot</option>
-                </select>
-              </div>
-              <select name="goodsci" class="form-control" required>
-                <option selected disabled>How good are you at science?</option>
-                <option value="1">I'm not at all good at science</option>
-                <option value="2">I'm not very good at science</option>
-                <option value="3">I'm just OK at science</option>
-                <option value="4">I'm quite good at science</option>
-                <option value="5">I'm very good at science</option>
-              </select>
-            </div>
-          </div> <!-- form-group row -- views -->
-          <div class="form-group">
-
-          </div> <!-- form-group row -- Likert-->
-            <legend>Your views (testing)</legend>
-            <div class="col">
               <div class="form-group form-check">
                 <label>How much do you like science?</label>
                 <ul class="likert">
                   <li>
-                    <input type="radio" class="form-check-input" name="likert" value="1" id="like1">
+                    <input type="radio" class="form-check-input" name="likesci" value="1" id="like1">
                     <label for="like1">😄</label>
                   </li>
                   <li>
-                    <input type="radio" class="form-check-input" name="likert" value="2" id="like2">
+                    <input type="radio" class="form-check-input" name="likesci" value="2" id="like2">
                     <label for="like2">🙂</label>
                   </li>
                   <li>
-                    <input type="radio" class="form-check-input" name="likert" value="3" id="like3">
+                    <input type="radio" class="form-check-input" name="likesci" value="3" id="like3">
                     <label for="like3">😐</label>
                   </li>
                   <li>
-                    <input type="radio" class="form-check-input" name="likert" value="4" id="like4">
+                    <input type="radio" class="form-check-input" name="likesci" value="4" id="like4">
                     <label for="like4">🙁</label>
                   </li>
                   <li>
-                    <input type="radio" class="form-check-input" name="likert" value="5" id="like5">
+                    <input type="radio" class="form-check-input" name="likesci" value="5" id="like5">
                     <label for="like5">☹️</label>
+                  </li>
+                </ul>
+                <label>How good are you at science?</label>
+                <ul class="likert">
+                  <li>
+                    <input type="radio" class="form-check-input" name="goodsci" value="1" id="good1">
+                    <label for="good1">😄</label>
+                  </li>
+                  <li>
+                    <input type="radio" class="form-check-input" name="goodsci" value="2" id="good2">
+                    <label for="good2">🙂</label>
+                  </li>
+                  <li>
+                    <input type="radio" class="form-check-input" name="goodsci" value="3" id="good3">
+                    <label for="good3">😐</label>
+                  </li>
+                  <li>
+                    <input type="radio" class="form-check-input" name="goodsci" value="4" id="good4">
+                    <label for="good4">🙁</label>
+                  </li>
+                  <li>
+                    <input type="radio" class="form-check-input" name="goodsci" value="5" id="good5">
+                    <label for="good5">☹️</label>
                   </li>
                 </ul>
               </div> <!-- form-group -->
             </div> <!-- col -->
+          </div> <!-- form-group row -->
           <div class="form-group row mt-5">
             <!-- <hr> -->
             <button type="submit" class="submit btn btn-warning" value="To Activity">To Activity</button>
 
           </div>
         </form>
-      </div> <!-- container -->
+      </div>
+    </div>
+  </div> <!-- container -->
 
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
