@@ -36,20 +36,22 @@
       <div class="col-md-10 mx-auto">
         <!-- span 10 of 12 columns, mx-auto centres the resulting layout -->
         <form action="./redirect.php" method="post">
-          <div class="form-group row">
-            <legend>Your name</legend>
+          <div class="row">
             <div class="col">
-              <input type="text" class="form-control" name="fname" placeholder="First name..." required>
-              <small id="nameHelp" lass="form-text text-muted">We don't store your full name, just an identifier made from it.</small>
+              <legend>Your name</legend>
+             </div>
+            <div class="col">
+              <legend>Your date of birth</legend>
             </div>
-            <div class="col">
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <input type="text" class="form-control" name="fname" placeholder="First name..." required>
+            </div>
+            <div class="col-3">
               <input type="text" class="form-control" name="lname" placeholder="Last name..." required>
             </div>
-            <!-- <label for="name1">Your name</label> -->
-          </div> <!-- row -->
-          <div class="form-group row">
-            <legend>Your date of birth</legend>
-            <div class="col-2">
+            <div class="col">
               <select class="form-control" name="bday" required>
                 <option selected disabled">Day</option>
                 <option value="01">1</option>
@@ -84,9 +86,8 @@
                 <option value="30">30</option>
                 <option value="31">31</option>
               </select>
-              <!-- <input type="number" name="bday" min="1" max="31" placeholder="Birth day...">  -->
             </div>
-            <div class="col-2">
+            <div class="col">
               <select name="bmonth" class="form-control" required>
                 <option selected disabled>Month</option>
                 <option value='01'>January</option>
@@ -103,7 +104,7 @@
                 <option value='12'>December</option>
               </select>
             </div>
-            <div class="col-2">
+            <div class="col">
               <select name="byear" class="form-control">
                 <option selected disabled>Year</option>
                 <option value="2000">2000</option>
@@ -125,10 +126,16 @@
                 <option value-"2016">2016</option>
               </select>
             </div>
-          </div> <!-- form-group row -- Date of birth-->
+          </div>
           <div class="form-group row">
-            <legend>Your school</legend>
+            <div class="col-6">
+              <small id="nameHelp" lass="form-text text-muted">We don't store your full name, just an identifier made from it.</small>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="form-group row">
             <div class="col">
+                <legend>Your school</legend>
               <!-- TODO: Amend schools list -->
               <select name="school" class="form-control" required>
                 <option selected disabled>Select school...</option>
@@ -155,9 +162,10 @@
             </div>
           </div> <!-- form-group row -- School -->
           <div class="form-group row">
-            <legend>About you</legend>
             <div class="col">
+              
               <div class="form-group">
+                  <legend>About you</legend>
                 <select name="gender" class="form-control" required>
                   <option selected disabled>I am...</option>
                   <option value="f">A girl</option>
@@ -178,8 +186,8 @@
             </div>
           </div> <!-- form-group row -- about person -->
           <div class="form-group row">
-            <legend>Your views</legend>
             <div class="col">
+                <legend>Your views</legend>
               <div class="form-group form-check">
                 <label>How much do you like science?</label>
                 <ul class="likert">
