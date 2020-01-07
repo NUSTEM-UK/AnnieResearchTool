@@ -27,8 +27,8 @@
         <p class="lead">Hello. Welcome to NUSTEM's games pages.</p>
         <p>In a minute you will get to play two different games. <br />
           Before you get started please add your name, date of birth
-          and school name below<br>
-          <em>Name and dates will be used to create an anonymous identifier.</em></p>
+          and school name below. Name and dates will only be used 
+          to create an anonymous identifier.</p>
       </div>
     </div>
     <div class="row">
