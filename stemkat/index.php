@@ -190,46 +190,76 @@
                 <ul class="likert">
                   <li>
                     <input type="radio" class="form-check-input" name="likesci" value="1" id="like1">
-                    <label for="like1">😄</label>
+                    <!-- <label for="like1">😄</label> -->
+                    <label for="like1">
+                      <img src="static/images/likert-01.png" width="50px" height="50px" alt="😄">
+                    </label>
                   </li>
                   <li>
                     <input type="radio" class="form-check-input" name="likesci" value="2" id="like2">
-                    <label for="like2">🙂</label>
+                    <!-- <label for="like2">🙂</label> -->
+                    <label for="like2">
+                      <img src="static/images/likert-02.png" width="50px" height="50px" alt="🙂">
+                    </label>
                   </li>
                   <li>
                     <input type="radio" class="form-check-input" name="likesci" value="3" id="like3">
-                    <label for="like3">😐</label>
+                    <!-- <label for="like3">😐</label> -->
+                    <label for="like3">
+                      <img src="static/images/likert-03.png" width="50px" height="50px" alt="😐">
+                    </label>
                   </li>
                   <li>
                     <input type="radio" class="form-check-input" name="likesci" value="4" id="like4">
-                    <label for="like4">🙁</label>
+                    <!-- <label for="like4">🙁</label> -->
+                    <label for="like4">
+                      <img src="static/images/likert-04.png" width="50px" height="50px" alt="🙁">
+                    </label>
                   </li>
                   <li>
                     <input type="radio" class="form-check-input" name="likesci" value="5" id="like5">
-                    <label for="like5">☹️</label>
+                    <!-- <label for="like5">☹️</label> -->
+                    <label for="like5">
+                      <img src="static/images/likert-05.png" width="50px" height="50px" alt="☹️">
+                    </label>
                   </li>
                 </ul>
                 <label>How good are you at science?</label>
                 <ul class="likert">
                   <li>
                     <input type="radio" class="form-check-input" name="goodsci" value="1" id="good1">
-                    <label for="good1">😄</label>
+                    <!-- <label for="good1">😄</label> -->
+                    <label for="good1">
+                      <img src="static/images/likert-01.png" width="50px" height="50px" alt="☹️">
+                    </label>
                   </li>
                   <li>
                     <input type="radio" class="form-check-input" name="goodsci" value="2" id="good2">
-                    <label for="good2">🙂</label>
+                    <!-- <label for="good2">🙂</label> -->
+                    <label for="good2">
+                      <img src="static/images/likert-02.png" width="50px" height="50px" alt="☹️">
+                    </label>
                   </li>
                   <li>
                     <input type="radio" class="form-check-input" name="goodsci" value="3" id="good3">
-                    <label for="good3">😐</label>
+                    <!-- <label for="good3">😐</label> -->
+                    <label for="good3">
+                      <img src="static/images/likert-03.png" width="50px" height="50px" alt="☹️">
+                    </label>
                   </li>
                   <li>
                     <input type="radio" class="form-check-input" name="goodsci" value="4" id="good4">
-                    <label for="good4">🙁</label>
+                    <!-- <label for="good4">🙁</label> -->
+                    <label for="good4">
+                      <img src="static/images/likert-04.png" width="50px" height="50px" alt="☹️">
+                    </label>
                   </li>
                   <li>
                     <input type="radio" class="form-check-input" name="goodsci" value="5" id="good5">
-                    <label for="good5">☹️</label>
+                    <!-- <label for="good5">☹️</label> -->
+                    <label for="good5">
+                      <img src="static/images/likert-05.png" width="50px" height="50px" alt="☹️">
+                    </label>
                   </li>
                 </ul>
               </div> <!-- form-group -->
