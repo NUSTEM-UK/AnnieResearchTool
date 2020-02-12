@@ -179,6 +179,7 @@
                 <option value='0037'>...in Holystone Primary.</option>
                 <option value='0038'>...in Barnes Junior School.</option>
                 <option value='0039'>...in Waverley Primary School.</option>
+                <option value='0040'>...in Valley Road.</option>
               </select>
             </div>
           </div> <!-- form-group row -- School -->
