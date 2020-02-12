@@ -14,7 +14,7 @@
   <?php
     /** 
      * Start session to use as data storage to keep personal data 
-    */
+     */
     session_start();
   ?>
 </head>
@@ -23,7 +23,7 @@
   <div class="container">
     <div class="row">
       <div class="jumbotron">
-        <h1 class="display-4">STEMKAT: NUSTEM Games for CITE</h1>
+        <h1 class="display-4">STEMKAT: NUSTEM Careers Games</h1>
         <p class="lead">Hello. Welcome to NUSTEM's games pages.</p>
         <p>In a minute you will get to play two different games. <br />
           Before you get started please add your name, date of birth
@@ -169,15 +169,16 @@
                 <option value='0027'>...in Burradon Community Primary.</option>
                 <option value='0028'>...in Chillingham Road Primary.</option>
                 <option value='0029'>...in Kenton Bar Primary.</option>
-                <option value='0030'>...in New York Primary</opti.on> -->
+                <option value='0030'>...in New York Primary</option> -->
                 <option value='0031'>...in St. Mary's RC Primary.</option>
                 <option value='0032'>...in Cleadon C of E Primary.</option>
                 <option value='0033'>...in Hadrian Park Primary.</option>
                 <option value='0034'>...in South Hylton Primary Academy.</option>
-                <option value='0035'>...in St. Mark's RC Primary .</option>
+                <option value='0035'>...in St. Mark's RC Primary.</option>
                 <option value='0036'>...in Willow Fields Primary.</option>
                 <option value='0037'>...in Holystone Primary.</option>
                 <option value='0038'>...in Barnes Junior School.</option>
+                <option value='0039'>...in Waverley Primary School.</option>
               </select>
             </div>
           </div> <!-- form-group row -- School -->
