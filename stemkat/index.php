@@ -169,15 +169,16 @@
                 <option value='0027'>...in Burradon Community Primary.</option>
                 <option value='0028'>...in Chillingham Road Primary.</option>
                 <option value='0029'>...in Kenton Bar Primary.</option>
-                <option value='0030'>...in New York Primary</opti.on> -->
+                <option value='0030'>...in New York Primary</option> -->
                 <option value='0031'>...in St. Mary's RC Primary.</option>
                 <option value='0032'>...in Cleadon C of E Primary.</option>
                 <option value='0033'>...in Hadrian Park Primary.</option>
                 <option value='0034'>...in South Hylton Primary Academy.</option>
-                <option value='0035'>...in St. Mark's RC Primary .</option>
+                <option value='0035'>...in St. Mark's RC Primary.</option>
                 <option value='0036'>...in Willow Fields Primary.</option>
                 <option value='0037'>...in Holystone Primary.</option>
                 <option value='0038'>...in Barnes Junior School.</option>
+                <option value='0039'>...in Waverley Primary School.</option>
               </select>
             </div>
           </div> <!-- form-group row -- School -->
