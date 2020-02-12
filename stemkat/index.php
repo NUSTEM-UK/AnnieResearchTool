@@ -14,7 +14,7 @@
   <?php
     /** 
      * Start session to use as data storage to keep personal data 
-    */
+     */
     session_start();
   ?>
 </head>
@@ -23,7 +23,7 @@
   <div class="container">
     <div class="row">
       <div class="jumbotron">
-        <h1 class="display-4">STEMKAT: NUSTEM Games for CITE</h1>
+        <h1 class="display-4">STEMKAT: NUSTEM Careers Games</h1>
         <p class="lead">Hello. Welcome to NUSTEM's games pages.</p>
         <p>In a minute you will get to play two different games. <br />
           Before you get started please add your name, date of birth
