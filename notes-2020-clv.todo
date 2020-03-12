@@ -71,7 +71,8 @@ Deployment:
         - Check direct access to `report/skat.php` doesn't work.
     - Test
         - Fails with error code 01000
-         
+        - Turn on debug in request.php. Looks like the unknown field is malformed.
+
 
 Full name but encrypted:
 - Will need to change fields in `/jobs.request.php`
