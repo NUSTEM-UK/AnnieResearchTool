@@ -1,0 +1,73 @@
+Changes for Cramlington Learning Village, March 2020:
+
+✔ New branch (forked from feb-202) @done(20-03-12 09:50)
+✔ Clone stemkat -> clv @done(20-03-12 09:50)
+✘ Populate this todo list @cancelled(20-03-12 09:52)
+
+
+
+Database:
+    ✔ New database `frida` @done(20-03-12 10:06)
+        ✔ Try as utf8mb4 encoding, utf8mb4_general_ci collation @done(20-03-12 10:06)
+    ✔ Grant access (to user `ivan`); everything except 'grant option' @done(20-03-12 10:06)
+    ✔ Change database name in `clv/src/connect.php` @done(20-03-12 10:07)
+    Pre-populate:
+        ✔ Looks like `db_prep/stemkkat_db_structure.sql` is fine. Run in Sequel Pro console @done(20-03-12 10:09)
+        ☐ Need to run `db_prep/careersinsert.php` on live server
+
+index.php:
+    ✔ Update page title @done(20-03-12 10:12)
+    ✔ Update page heading @done(20-03-12 10:12)
+    ✔ Update welcome text. @done(20-03-12 10:13)
+    - Note: Unclear how we're using personal details, left vague (which is not best practice)
+    ✔ Comment out 'We don't store your full name' disclaimer. @done(20-03-12 10:18)
+    ✔ Add Cramlington to selector @done(20-03-12 10:16)
+    ✔ Comment out other schools @done(20-03-12 10:16)
+
+redirect.php:
+    - We could encrypt first and last name here, and handle the database insert differently when we get to that part later.
+    ✔ Change redirection target to `https://nustem.uk/r/clv/jobs/` @done(20-03-12 10:18)
+
+jobs/index.php:
+    ✔ tweak return path (line 29) @done(20-03-12 10:47)
+
+jobs/src/index.js:
+    ✔ Retarget reload page (line 13). @done(20-03-12 10:51)
+    ✔ Retarget reloads on lines 246, 252 @done(20-03-12 10:54)
+
+jobs/getcareers.php:
+    ✔ connect.php load path already changed and relative. @done(20-03-12 11:04)
+
+jobs/request.php:
+    ✔ Think this is unchanged. @done(20-03-12 11:07);
+
+EndScreen/index.php:
+    ✔ Line 20 target @done(20-03-12 11:08);
+    ✔ InteractJS version @done(20-03-12 11:08);
+
+report/index.html:
+    ✔ jQuery and InteractJS versions @done(20-03-12 11:11);
+
+report/skat.php:
+    - How to handle decryption here? Do all of this offline?
+
+report/src/download.js:
+    ✔ Retarget link line 6 @done(20-03-12 11:22);
+    - Rename download file line 13 @started(20-03-12 11:23);
+
+
+global:
+- jquery version load to `https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js`
+- interact version load to `https://cdn.jsdelivr.net/npm/interactj/dist/interact.min.js`
+
+
+Deployment:
+    - git pull
+    - 
+    - Password-protect report page
+        - Check direct access to `report/skat.php` doesn't work.
+
+Full name but encrypted:
+- Will need to change fields in `/jobs.request.php`
+- `src/index.js` -- where the id is computed (line 197).
+- `report/skat.php` -- how to do decryption here without exposing a hole?

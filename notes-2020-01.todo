@@ -6,9 +6,9 @@ Useful:
 
 CITE tools:
 ☐ Clean up front page:
-    ☐ Marge in Bootstrap?
-    ☐ Layout front-page form
-    ☐ Enter full date of birth (& discard year)
+    ✔ Marge in Bootstrap? @done(20-03-12 09:42)
+    ✔ Layout front-page form @done(20-03-12 09:42)
+    ✔ Enter full date of birth (& discard year) @done(20-03-12 09:42)
     ☐ Check Bootstrap CSS on remaining pages, possibly integrate throughout?
 ☐ Double-check how we're computing unique respondent UD
 ✔ Schools list: @done(19-12-09 14:06)
@@ -20,8 +20,8 @@ CITE tools:
     ✔ 0036 Willow Fields Primary @done(19-12-09 14:09)
     ✔ 0037 Holystone Primary @done(19-12-09 14:09)
     ✔ 0038 Barnes Junior School @done(19-12-09 14:09)
-☐ Tell Annie what the codings are for the schools
-☐ Build nice likert scale stuff: https://codepen.io/Buttonpresser/pen/qiuIx
+✔ Tell Annie what the codings are for the schools @done(20-03-12 09:42)
+✔ Build nice likert scale stuff: https://codepen.io/Buttonpresser/pen/qiuIx @done(20-03-12 09:43)
     
 
 Server:
