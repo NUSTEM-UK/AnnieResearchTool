@@ -62,10 +62,16 @@ global:
 
 
 Deployment:
-    - git pull
-    - 
+    ✔ git push and merge @done(20-03-12 15:10)
+    ✔ git pull on server @done(20-03-12 15:10)
+    ✔ Manually write `connect.php` to `clv/src/` @done(20-03-12 15:12)
+    ✔ Populate database by loading https://nustem.uk/r/clv/db_prep/careersinsert.php @done(20-03-12 15:13);
+    ✔ Verify `careers_list` table populated. @done(20-03-12 15:13);
     - Password-protect report page
         - Check direct access to `report/skat.php` doesn't work.
+    - Test
+        - Fails with error code 01000
+         
 
 Full name but encrypted:
 - Will need to change fields in `/jobs.request.php`
