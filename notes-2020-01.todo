@@ -31,3 +31,6 @@ Next campaign:
 ☐ Build out using every job we've ever had, as a test, under /r/stemkat.
 ☐ Tell Annie, see what we all think.
 
+
+2020-02-13 Debugging iOS9 issues:
+☐ We're not doing `touch-action: none` or `user-select: none` as advised in the [Interaction library docs](https://interactjs.io/docs/draggable).
