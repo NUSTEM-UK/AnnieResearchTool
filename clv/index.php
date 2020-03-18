@@ -25,8 +25,8 @@
       <div class="jumbotron">
         <h1 class="display-4">Cramlington Careers Tracker</h1>
         <p class="lead">Hello.</p>
-        <p>In a minute you will get to play a simple sorting game. <br />
-          Before you get started, please add your details below.
+        <p>In a minute you will get to play a simple sorting game. 
+           Before you get started, please add your details below.
         </p>
       </div>
     </div>
