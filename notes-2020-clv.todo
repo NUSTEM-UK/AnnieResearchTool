@@ -71,9 +71,15 @@ Deployment:
         - Check direct access to `report/skat.php` doesn't work.
     - Test
         - Fails with error code 01000
-         
+        - Turn on debug in request.php. Looks like the unknown field is malformed.
+
 
 Full name but encrypted:
 - Will need to change fields in `/jobs.request.php`
 - `src/index.js` -- where the id is computed (line 197).
 - `report/skat.php` -- how to do decryption here without exposing a hole?
+
+
+FOUND THE BUG:
+- It's in `connect.php`; somehow, I'd ended up with two blank lines at the end of the script. PHP was interpreting them as line breaks, and include `\n\n` in the script output - which is read directly in `jobs/index.js` to construct the SQL. Hence the malformed SQL.
+- [PHP recommendation](https://www.php.net/manual/en/language.basic-syntax.phptags.php) is to omit the closing `?>` from such files, to avoid precisely this error.
