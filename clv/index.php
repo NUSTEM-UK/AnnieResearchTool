@@ -12,24 +12,24 @@
   <!-- <link href="static/css/bootstrap-slate.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" type="text/css" href="style.css" />
   <?php
-    /** 
-     * Start session to use as data storage to keep personal data 
-     */
-    session_start();
+  /** 
+   * Start session to use as data storage to keep personal data 
+   */
+  session_start();
   ?>
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="jumbotron">
-        <h1 class="display-4">Cramlington Careers Tracker</h1>
-        <p class="lead">Hello.</p>
-        <p>In a minute you will get to play a simple sorting game. 
-           Before you get started, please add your details below.
-        </p>
-      </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <h1 class="display-4">Cramlington Careers Tracker</h1>
+      <p class="lead">Hello.</p>
+      <p>In a minute you will get to play a simple sorting game.
+        Before you get started, please add your details below.
+      </p>
     </div>
+  </div>
+  <div class="container">
     <div class="row">
       <!-- Personal info form -->
       <div class="col-md-10 mx-auto">
@@ -147,12 +147,19 @@
             <div class="col-3">
               <select name="yeargroup" class="form-control" required>
                 <option selected disabled>...in year...</option>
-                <option value="1">...in year 1...</option>
-                <option value="2">...in year 2...</option>
-                <option value="3">...in year 3...</option>
-                <option value="4">...in year 4...</option>
-                <option value="5">...in year 5...</option>
-                <option value="6">...in year 6...</option>
+                <!-- <option value="1">...in year 1...</option> -->
+                <!-- <option value="2">...in year 2...</option> -->
+                <!-- <option value="3">...in year 3...</option> -->
+                <!-- <option value="4">...in year 4...</option> -->
+                <!-- <option value="5">...in year 5...</option> -->
+                <!-- <option value="6">...in year 6...</option> -->
+                <option value="7">...in year 7...</option>
+                <option value="8">...in year 8...</option>
+                <option value="9">...in year 9...</option>
+                <option value="10">...in year 10...</option>
+                <option value="11">...in year 11...</option>
+                <option value="12">...in year 12...</option>
+                <option value="13">...in year 13...</option>
               </select>
             </div>
             <div class="col-6">

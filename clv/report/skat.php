@@ -32,19 +32,23 @@
     	}
 
     	foreach (explode(",", $row['unknown']) as $career) {
-           $data[$row['id']][$career] = 9;
+        //    $data[$row['id']][$career] = 9;
+           $data[$row['id']][$career] = 'unknown';
     	}
 
     	foreach (explode(",", $row['liked']) as $career) {
-    	   $data[$row['id']][$career] = 1;
+    	//    $data[$row['id']][$career] = 1;
+    	   $data[$row['id']][$career] = 'liked';
     	}
 
     	foreach (explode(",", $row['disliked']) as $career) {
-           $data[$row['id']][$career] = 2;
+        //    $data[$row['id']][$career] = 2;
+           $data[$row['id']][$career] = 'disliked';
     	}
 
     	foreach (explode(",", $row['unsure']) as $career) {
-           $data[$row['id']][$career] = 3;
+        //    $data[$row['id']][$career] = 3;
+           $data[$row['id']][$career] = 'unsure';
     	}
 
         $data[$row['id']]['timestamp'] = $row['timestamp'];

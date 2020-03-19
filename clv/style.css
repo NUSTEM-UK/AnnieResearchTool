@@ -140,3 +140,7 @@ form .likert:before {
 	width: 78%;
 }
 
+
+.jumbotron {
+	padding: 50px;
+}
