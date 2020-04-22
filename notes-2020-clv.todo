@@ -83,3 +83,22 @@ Full name but encrypted:
 FOUND THE BUG:
 - It's in `connect.php`; somehow, I'd ended up with two blank lines at the end of the script. PHP was interpreting them as line breaks, and include `\n\n` in the script output - which is read directly in `jobs/index.js` to construct the SQL. Hence the malformed SQL.
 - [PHP recommendation](https://www.php.net/manual/en/language.basic-syntax.phptags.php) is to omit the closing `?>` from such files, to avoid precisely this error.
+
+OTHER BUG:
+    - There's a reporting bug where empty entries somehow end up as spurious extra columns. The issue is in the `skat.php` script, which isn't checking for null entries.
+    - We've previously tested and found that the extra column is the last one before the timestamp, therefore reconstructing correct data is straightforward.
+    - Still... messy and horrid.
+
+Password-protect report directory:
+    - Following [guide](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/).
+    - `sudo apt install apache2-utils`
+    - `sudo htpasswd -c /etc/apache2/.htpasswd [user]`
+    - User and password is in 1password
+    - `sudo nano /etc/nginx/sites-available/nustem.uk`, edit:
+        location /r/clv/reports/ {
+            auth_basic            "Retrieve Reports";
+            auth_basic_user_file  /etc/apache2/.htpasswd;
+        }
+    - `sudo nginx -t`
+    - `sudo service nginx restart`
+    
